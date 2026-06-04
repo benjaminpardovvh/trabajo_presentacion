@@ -5,9 +5,11 @@
     border: 1px red solid;
     font-family: 'Minecraft', sans-serif;
 }
-
+body{
+    background: url(/trabajo/static/images/image.png);
+}
 .header{
-    background: url(/trabajo/static/images/free-minecraft-sky-background-4qmjm.jfif);
+    background: url(/trabajo/static/images/sky.png);
     height: 150px;
     display: flex; 
     text-align: center;
@@ -33,6 +35,9 @@
     gap: 20px;
     font-size: 30px;
 }
+.over{
+
+}
 @font-face {
     font-family: 'Minecraft';
     src: url('/trabajo/static/fuente/Minecraft.ttf') format('truetype');
@@ -41,16 +46,26 @@
     text-decoration: none;
     color: rgb(60, 60, 60);
 }
-
-.logo{
-    height: 100px;
+.portal{
     width: 100px;
+    height: 100px;
+}
+.division{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 100px;
+    background-image: url(/trabajo/static/images/portal.gif);
+    background-size: 100px 100px ;
+}
+.logo{
+    height: 110px;
+    width: 110px;
 }
 .logodiv{
     margin-left: 30px;
 }
 .main{
-    background: url(/trabajo/static/images/overworld.jpg);
+    background: url(/trabajo/static/images/overworld.png);
     height: 600px;
-    margin-top: 150px;
 }
