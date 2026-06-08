@@ -2,16 +2,18 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    /*border: 1px red solid;*/
+    border: 1px red solid;
     font-family: 'Minecraft', sans-serif;
 }
 .body-o{
     background: url(/static/images/overworld.png);
 }
 .body-n{
+    color: rgb(255, 255, 255);
+}
+.main-n{
     background: url(/static/images/Nether.jpeg);
     background-repeat: no-repeat;
-    background-position: center center;
     background-size: cover;
 }
 .header{
@@ -25,15 +27,15 @@
     flex-direction: row;
 }
 .n{
+    background: url(/static/images/portal.gif);
+    background-size: 150px 150px ;
     height: 150px;
     display: flex; 
     text-align: center;
-    font-size: 20px;  
-    justify-content: space-between ;
+    font-size: 20px;
     align-items: center;
     flex-direction: row;
-    background: url(/trabajo/static/images/portal.gif);
-    background-size: 150px 150px ;
+    color: rgb(255, 255, 255);
 }
 
 .navbar{
@@ -53,6 +55,7 @@
     align-items: center;
     flex-direction: row;
     width: 100%;
+    
 }
 
 .nav-links{
@@ -66,11 +69,11 @@
 }
 @font-face {
     font-family: 'Minecraft';
-    src: url('/trabajo/static/fuente/Minecraft.ttf') format('truetype');
+    src: url('/static/fuente/Minecraft.ttf') format('truetype');
 }
 .nig{
     text-decoration: none;
-    color: rgb(60, 60, 60);
+    color: rgb(0, 0, 0);
 }
 .portal{
     width: 100px;
