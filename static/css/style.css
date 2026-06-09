@@ -1,15 +1,16 @@
-/* =========================
-   ESTILOS GENERALES
-========================= */
-
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'MinecraftFont', Arial, Helvetica, sans-serif;
 }
 
-body{
-    font-family: Arial, Helvetica, sans-serif;
+@font-face {
+    font-family: 'MinecraftFont';
+    src: url('/static/fuente/Minecraft.ttf') format('truetype');
+}
+
+body {
     background-color: #1e1e1e;
     color: white;
     line-height: 1.6;
@@ -19,60 +20,79 @@ body{
    NAVBAR
 ========================= */
 
-.header{
-    position: sticky;
-    top: 0;
-    z-index: 100;
+.header {
+    height: 150px;
 }
 
-.navbar{
+.navbar {
     background-color: #2d5a27;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    height: 150px;
     padding: 15px 40px;
     border-bottom: 4px solid #7c5a35;
 }
-
-.logo{
-    width: 70px;
-}
-
-.nav-links{
+.nav-links {
     display: flex;
     gap: 25px;
 }
 
-.nav-links a{
+.nav-links a {
     text-decoration: none;
     color: white;
     font-weight: bold;
-    transition: 0.3s;
+    transition: all .3s;
 }
 
-.nav-links a:hover{
-    color: #8cff66;
+.O:hover{
+    text-shadow: 0 0 10px #4CAF50;
+    background-color: #9af19d;
+    background-image: none;
+    transition: all 0.6s ease;
+    transform: scale(1.2);
+}
+
+.C:hover{
+    background-color: rgb(163, 163, 163);
+    text-shadow: 0 0 10px #9E9E9E;
+    background-image: none;
+    transform: scale(1.2);
+}
+
+.N:hover{
+    background-color: #FF4500;
+    text-shadow: 0 0 10px #FF4500;
+    background-image: none;
+    transition: all 0.6s ease;
+    transform: scale(1.2);
+}
+
+.E:hover{
+    background-color: #A020F0;
+    text-shadow: 0 0 10px #A020F0;
+    background-image: none;
+    transition: all 0.6s ease;
+    transform: scale(1.2);
 }
 
 /* =========================
    INTRODUCCIÓN
 ========================= */
 
-.intro-over{
-    background: linear-gradient(
-        rgba(0,0,0,.7),
-        rgba(0,0,0,.7)
-    );
+.intro-over {
+    background: linear-gradient(rgba(0, 0, 0, .7),
+            rgba(0, 0, 0, .7));
     padding: 50px;
     text-align: center;
 }
 
-.intro-over-texto{
+.intro-over-texto {
     max-width: 1000px;
     margin: auto;
 }
 
-.intro-over-texto p{
+.intro-over-texto p {
     margin-bottom: 20px;
     font-size: 1.1rem;
 }
@@ -85,7 +105,7 @@ body{
 .bioma-bosques,
 .bioma-montañas,
 .bioma-desiertos,
-.bioma-Raros{
+.bioma-Raros {
     padding: 40px;
     margin: 30px;
     background-color: #2b2b2b;
@@ -93,28 +113,36 @@ body{
     border-radius: 15px;
 }
 
-.intro-bioma-over{
+.intro-bioma-over {
     text-align: center;
     margin-bottom: 30px;
 }
 
-.intro-bioma-over h2{
+.intro-bioma-over h2 {
     font-size: 2rem;
     color: #6dff4f;
     margin-bottom: 15px;
 }
-
+.img-bioma{
+    width: 50%px;
+    height: 400px;
+    background-size: cover;
+    background: url(/static/images/Plains.webp);
+    border-radius: 20px;
+    border: #2d5a27 3px solid;
+    margin-bottom: 20px;
+}
 /* =========================
    MOBS
 ========================= */
 
-.mobs-over{
+.mobs-over {
     display: flex;
     flex-direction: column;
     gap: 20px;
 }
 
-.mob-over{
+.mob-over {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -124,24 +152,24 @@ body{
     border-left: 8px solid #4caf50;
 }
 
-.texto-mob-over{
+.texto-mob-over {
     flex: 1;
     padding-right: 20px;
 }
 
-.texto-mob-over h2{
+.texto-mob-over h2 {
     color: #8cff66;
     margin-bottom: 10px;
 }
 
-.img-mob-over{
+.img-mob-over {
     width: 180px;
     text-align: center;
 }
 
 .mob,
 .mobC,
-.img-mob-over img{
+.img-mob-over img {
     width: 150px;
     max-width: 100%;
     object-fit: contain;
@@ -151,13 +179,13 @@ body{
    LISTAS
 ========================= */
 
-ol{
+ol {
     margin-left: 20px;
     margin-top: 10px;
     margin-bottom: 10px;
 }
 
-li{
+li {
     margin-bottom: 5px;
 }
 
@@ -165,17 +193,17 @@ li{
    MATERIALES
 ========================= */
 
-.mats{
+.mats {
     margin-top: 40px;
 }
 
-.mats h2{
+.mats h2 {
     text-align: center;
     color: #ffc107;
     margin-bottom: 25px;
 }
 
-.Material{
+.Material {
     display: flex;
     align-items: center;
     gap: 20px;
@@ -185,13 +213,13 @@ li{
     border-radius: 10px;
 }
 
-.img-mats-over img{
+.img-mats-over img {
     width: 100px;
     height: 100px;
     object-fit: contain;
 }
 
-.texto-mats-over h3{
+.texto-mats-over h3 {
     color: #ffdc73;
 }
 
@@ -199,24 +227,267 @@ li{
    FOOTER
 ========================= */
 
-.diccionario-over{
+.diccionario-over {
     margin-top: 50px;
     padding: 30px;
     background-color: #111;
     border-top: 4px solid #4caf50;
 }
 
-.diccionario-over h2{
+.diccionario-over h2 {
     color: #8cff66;
     margin-bottom: 15px;
 }
 
-.diccionario-over ul{
+.diccionario-over ul {
     margin-left: 20px;
 }
 
-.diccionario-over li{
+.diccionario-over li {
     margin-bottom: 10px;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 768px) {
+
+    .navbar {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .mob-over {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .texto-mob-over {
+        padding-right: 0;
+        margin-bottom: 15px;
+    }
+
+    .Material {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+.O {
+    font-size: 40px;
+    font-weight: bold;
+    color: transparent;
+    background-image: url('/static/images/tierra.webp');
+    background-clip: text;
+    background-size: contain;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent
+}
+
+.N {
+    font-size: 40px;
+    font-weight: bold;
+    color: transparent;
+    background-image: url('/static/images/netherrack.jpg');
+    background-size:contain;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent
+}
+
+.C {
+    font-size: 40px;
+    font-weight: bold;
+    color: transparent;
+    background-image: url('/static/images/piedra.webp');
+    background-size:contain;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition: all 0.6 ease;
+}
+
+.E {
+    font-size: 40px;
+    font-weight: bold;
+    color: transparent;
+    background-image: url('/static/images/end\ stone.jpg');
+    background-size:contain;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.body-n{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #120707;
+    color: #f5f5f5;
+    line-height: 1.6;
+}
+
+/* =========================
+   NAVBAR
+========================= */
+
+.navbar-n{
+    background: linear-gradient(90deg,#3b0000,#6b0f0f);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+    border-bottom: 4px solid #ff5e00;
+    height: 150px
+}
+
+.logo{
+    width: 300px;
+    transition:all .3s ease, margin-left 0.5s ease;
+}
+
+.logo:hover{
+    transform: scale(1.4);
+    margin-left: 50px;
+}
+
+.select{
+    color: white;
+    font-size: 40px;
+    font-weight: bold;
+
+}
+.nav-links-n{
+    display: flex;
+    gap: 25px;
+    height: 150px;
+    align-items: center;
+}
+
+.nav-links-n a{
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    transition: .3s;
+}
+
+/* =========================
+   CONTENIDO PRINCIPAL
+========================= */
+
+.main-n{
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+    padding: 40px 0;
+}
+
+/* =========================
+   PRESENTACIÓN
+========================= */
+
+.presentacion-criaturas-nether{
+    text-align: center;
+    background: linear-gradient(
+        rgba(60,0,0,.9),
+        rgba(20,0,0,.9)
+    );
+    padding: 40px;
+    border-radius: 15px;
+    border: 2px solid #ff4500;
+    margin-bottom: 40px;
+}
+
+.presentacion-criaturas-nether h1{
+    color: #ff7b00;
+    font-size: 3rem;
+    margin-bottom: 20px;
+    text-shadow: 0 0 15px #ff4500;
+}
+
+.presentacion-criaturas-nether p{
+    font-size: 1.1rem;
+    max-width: 800px;
+    margin: auto;
+}
+
+/* =========================
+   LISTA DE CRIATURAS
+========================= */
+
+.lista-criaturas-nether{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+/* =========================
+   TARJETA DE CRIATURA
+========================= */
+
+.nether-criatura{
+    background-color: #2a0d0d;
+    border-left: 8px solid #ff4500;
+    border-radius: 15px;
+    padding: 25px;
+    transition: .3s;
+    box-shadow: 0 0 15px rgba(255,69,0,.2);
+}
+
+.nether-criatura:hover{
+    transform: translateY(-5px);
+    box-shadow: 0 0 25px rgba(255,69,0,.5);
+}
+
+.nether-criatura h2{
+    color: #ff9500;
+    margin-bottom: 15px;
+    font-size: 2rem;
+}
+
+/* =========================
+   DESCRIPCIÓN
+========================= */
+
+.descripcion-criatura-nether ul{
+    list-style: none;
+}
+
+.descripcion-criatura-nether li{
+    margin-bottom: 15px;
+    background-color: #381414;
+    padding: 15px;
+    border-radius: 10px;
+}
+
+.descripcion-criatura-nether h4{
+    display: inline;
+    color: #ffae42;
+}
+
+/* =========================
+   SCROLLBAR
+========================= */
+
+::-webkit-scrollbar{
+    width: 12px;
+}
+
+::-webkit-scrollbar-track{
+    background: #150808;
+}
+
+::-webkit-scrollbar-thumb{
+    background: #ff4500;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover{
+    background: #ff7b00;
 }
 
 /* =========================
@@ -235,18 +506,741 @@ li{
         justify-content: center;
     }
 
-    .mob-over{
-        flex-direction: column;
-        text-align: center;
+    .presentacion-criaturas-nether h1{
+        font-size: 2rem;
     }
 
-    .texto-mob-over{
-        padding-right: 0;
-        margin-bottom: 15px;
+    .nether-criatura h2{
+        font-size: 1.5rem;
+    }
+}
+
+/* =========================
+   ESTILOS GENERALES
+========================= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+.body-c{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color:#111418;
+    color:#e5e5e5;
+    line-height:1.6;
+}
+
+/* =========================
+   NAVBAR
+========================= */
+
+.navbar-c{
+    background:linear-gradient(90deg,#1d1f24,#31343d);
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:15px 40px;
+    border-bottom:4px solid #00c8ff;
+    height: 150px;
+}
+
+.nav-links-c{
+    display:flex;
+    gap:25px;
+}
+
+.nav-links-c a{
+    color:white;
+    text-decoration:none;
+    font-weight:bold;
+    transition:.3s;
+}
+
+/* =========================
+   INTRODUCCIÓN
+========================= */
+
+.intro-cuevas{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:40px;
+    padding:50px;
+    background:linear-gradient(
+        rgba(20,20,25,.95),
+        rgba(10,10,15,.95)
+    );
+}
+
+.intro-cuevas-texto{
+    flex:1;
+}
+
+.intro-cuevas-texto h1{
+    color:#00d9ff;
+    font-size:3rem;
+    margin-bottom:20px;
+    text-shadow:0 0 15px #00d9ff;
+}
+
+.intro-cuevas-imagen{
+    flex:1;
+    text-align:center;
+}
+
+.intro-cuevas-imagen img{
+    width:100%;
+    max-width:450px;
+}
+
+/* =========================
+   BIOMAS
+========================= */
+
+.bioma-cuevas{
+    margin:30px;
+    padding:30px;
+    background:#1d2229;
+    border-radius:15px;
+    border-left:8px solid #00d9ff;
+    box-shadow:0 0 15px rgba(0,217,255,.15);
+}
+
+.intro-bioma-cuevas{
+    text-align:center;
+    margin-bottom:25px;
+}
+
+.intro-bioma-cuevas h2{
+    color:#5be8ff;
+    margin-bottom:15px;
+}
+
+/* =========================
+   MOBS Y CRIATURAS
+========================= */
+
+.div-mobs-cuevas{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:25px;
+    background:#252b35;
+    margin-bottom:20px;
+    padding:20px;
+    border-radius:12px;
+    transition:.3s;
+}
+
+.div-mobs-cuevas:hover{
+    transform:translateY(-5px);
+    box-shadow:0 0 20px rgba(0,217,255,.3);
+}
+
+.texto-mobs-cuevas{
+    flex:1;
+}
+
+.texto-mobs-cuevas h2{
+    color:#7aefff;
+    margin-bottom:10px;
+}
+
+.img-mob-cuevas{
+    flex:0 0 220px;
+    text-align:center;
+}
+
+.img-mob-cuevas img{
+    width:200px;
+    max-width:100%;
+}
+
+/* =========================
+   ITEMS
+========================= */
+
+.Items-cuevas{
+    padding:30px;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(350px,1fr));
+    gap:20px;
+}
+
+.div-item-cuevas{
+    background:#20252d;
+    border-left:6px solid #5be8ff;
+    border-radius:12px;
+    padding:20px;
+    display:flex;
+    align-items:center;
+    gap:20px;
+    transition:.3s;
+}
+
+.div-item-cuevas:hover{
+    box-shadow:0 0 15px rgba(91,232,255,.4);
+}
+
+.img-item-cuevas img{
+    width:100px;
+}
+
+.texto-item-cuevas h2{
+    color:#5be8ff;
+}
+
+/* =========================
+   ESTRUCTURAS
+========================= */
+
+.estructuras-cuevas{
+    padding:30px;
+}
+
+.div-estructura-cuevas{
+    display:flex;
+    align-items:center;
+    gap:25px;
+    background:#252b35;
+    padding:20px;
+    margin-bottom:20px;
+    border-radius:12px;
+    border-left:6px solid #00d9ff;
+}
+
+.texto-estructura-cuevas{
+    flex:1;
+}
+
+.texto-estructura-cuevas h2{
+    color:#7aefff;
+    margin-bottom:10px;
+}
+
+.img-estructura-cuevas img{
+    width:220px;
+}
+
+/* =========================
+   SCROLLBAR
+========================= */
+
+::-webkit-scrollbar{
+    width:12px;
+}
+
+::-webkit-scrollbar-track{
+    background:#111418;
+}
+
+::-webkit-scrollbar-thumb{
+    background:#00d9ff;
+    border-radius:10px;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media(max-width:768px){
+
+    .intro-cuevas{
+        flex-direction:column;
+        text-align:center;
     }
 
-    .Material{
-        flex-direction: column;
-        text-align: center;
+    .div-mobs-cuevas,
+    .div-item-cuevas,
+    .div-estructura-cuevas{
+        flex-direction:column;
+        text-align:center;
     }
+
+    .navbar-c{
+        flex-direction:column;
+        gap:15px;
+    }
+
+    .nav-links-c{
+        flex-wrap:wrap;
+        justify-content:center;
+    }
+
+    .intro-cuevas-texto h1{
+        font-size:2rem;
+    }
+}
+
+.body-e{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color:#09070d;
+    color:#f2f2f2;
+    line-height:1.6;
+}
+
+/* =========================
+   NAVBAR
+========================= */
+
+.header-e{
+    height: 150px;
+}
+
+.navbar-e{
+    background: linear-gradient(90deg,#180023,#2d1040);
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:15px 40px;
+    border-bottom:4px solid #b266ff;
+    height: 150px;
+}
+
+.nav-links-e{
+    display:flex;
+    gap:25px;
+}
+
+.nav-links-e a{
+    text-decoration:none;
+    color:white;
+    font-weight:bold;
+    transition:.3s;
+}
+
+/* =========================
+   INTRODUCCIÓN
+========================= */
+
+.intro-end{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:40px;
+    padding:50px;
+    background:linear-gradient(
+        rgba(20,0,30,.9),
+        rgba(10,0,15,.9)
+    );
+}
+
+.intro-end-texto{
+    flex:1;
+}
+
+.intro-end-texto h1{
+    font-size:3rem;
+    color:#d6a8ff;
+    margin-bottom:20px;
+    text-shadow:0 0 15px #b266ff;
+}
+
+.intro-end-imagen{
+    flex:1;
+    text-align:center;
+}
+
+.intro-end-imagen img{
+    width:100%;
+    max-width:450px;
+    border-radius:15px;
+}
+
+/* =========================
+   TITULOS DE SECCIÓN
+========================= */
+
+.titulo-end{
+    text-align:center;
+    margin-bottom:30px;
+}
+
+.titulo-end h2{
+    color:#c68cff;
+    font-size:2rem;
+}
+
+/* =========================
+   CRIATURAS
+========================= */
+
+.criaturas-end{
+    padding:40px;
+}
+
+.end-criatura{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:25px;
+    background:#1b1025;
+    margin-bottom:25px;
+    padding:25px;
+    border-left:8px solid #b266ff;
+    border-radius:12px;
+    transition:.3s;
+}
+
+.end-criatura-f{
+    display:flex;
+    flex-direction: column;
+    align-items:center;
+    justify-content:space-between;
+    gap:25px;
+    background:#1b1025;
+    margin-bottom:25px;
+    padding:25px;
+    border-left:8px solid #b266ff;
+    border-radius:12px;
+    transition:.3s;
+}
+
+.end-criatura:hover{
+    transform:translateY(-5px);
+    box-shadow:0 0 20px rgba(178,102,255,.4);
+}
+
+.end-criatura-f:hover{
+    transform:translateY(-5px);
+    box-shadow:0 0 20px rgba(178,102,255,.4);
+}
+
+.img-criatura-end .boss{
+    width:100%;
+}
+.texto-criatura-end{
+    flex:1;
+}
+
+.texto-criatura-end h2{
+    color:#d6a8ff;
+    margin-bottom:10px;
+}
+
+.img-criatura-end{
+    flex:0 0 220px;
+    text-align:center;
+}
+
+.img-criatura-end img{
+    width:200px;
+    max-width:100%;
+}
+
+/* =========================
+   BLOQUES Y MATERIALES
+========================= */
+
+.bloques-end{
+    padding:40px;
+}
+
+.item-end{
+    display:flex;
+    align-items:center;
+    gap:25px;
+    background:#21122d;
+    margin-bottom:20px;
+    padding:20px;
+    border-radius:12px;
+    border-left:6px solid #c68cff;
+    transition:.3s;
+}
+
+.item-end:hover{
+    box-shadow:0 0 15px rgba(198,140,255,.5);
+}
+
+.texto-item-end{
+    flex:1;
+}
+
+.texto-item-end h2{
+    color:#d6a8ff;
+    margin-bottom:10px;
+}
+
+.img-item-end img{
+    width:120px;
+}
+
+/* =========================
+   ESTRUCTURAS
+========================= */
+
+.estructuras-end{
+    padding:40px;
+}
+
+.estructura-end{
+    display:flex;
+    align-items:center;
+    gap:25px;
+    justify-content: space-between;
+    background:#1d1027;
+    margin-bottom:20px;
+    padding:25px;
+    border-radius:12px;
+    border-left:6px solid #b266ff;
+}
+
+.texto-estructura-end{
+    flex:1;
+}
+
+.texto-estructura-end h2{
+    color:#d6a8ff;
+    margin-bottom:10px;
+}
+
+.img-estructura-end{
+    width: 400px;
+    max-width: 50%;
+}
+
+.img-estructura-end img{
+    width: 400px;
+}
+
+/* =========================
+   HOVER NAVBAR
+========================= */
+
+.O:hover{
+    color:#4CAF50;
+    text-shadow:0 0 10px #4CAF50;
+}
+
+.C:hover{
+    color:#00d9ff;
+    text-shadow:0 0 10px #00d9ff;
+}
+
+.N:hover{
+    color:#ff4500;
+    text-shadow:0 0 10px #ff4500;
+}
+
+.E:hover{
+    color:#b266ff;
+    text-shadow:0 0 10px #b266ff;
+}
+
+/* =========================
+   SCROLLBAR
+========================= */
+
+::-webkit-scrollbar{
+    width:12px;
+}
+
+::-webkit-scrollbar-track{
+    background:#09070d;
+}
+
+::-webkit-scrollbar-thumb{
+    background:#b266ff;
+    border-radius:10px;
+}
+
+::-webkit-scrollbar-thumb:hover{
+    background:#d6a8ff;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media(max-width:768px){
+
+    .navbar-e{
+        flex-direction:column;
+        gap:15px;
+    }
+
+    .nav-links-e{
+        flex-wrap:wrap;
+        justify-content:center;
+    }
+
+    .intro-end{
+        flex-direction:column;
+        text-align:center;
+    }
+
+    .end-criatura,
+    .item-end,
+    .estructura-end{
+        flex-direction:column;
+        text-align:center;
+    }
+
+    .intro-end-texto h1{
+        font-size:2rem;
+    }
+}
+
+.estruc-e{
+    border-radius: 20px;
+    border: #b700ff 2px solid;
+}
+
+.nether-criatura:hover,
+.end-criatura:hover,
+.div-mobs-cuevas:hover{
+    transform: translateY(-8px) scale(1.02);
+}
+
+.img-criatura-end img:hover,
+.img-mob-cuevas img:hover,
+.img-mob-over img:hover,
+.img-item-cuevas img:hover,
+.img-estructura-end img:hover{
+    transform: scale(1.1);
+    transition: 0.3s;
+}
+h1:hover,
+h2:hover{
+    letter-spacing: 2px;
+    transition: 0.3s;
+}
+.texto-criatura-end h2:hover,
+.texto-item-end h2:hover,
+.texto-estructura-end h2:hover{
+    text-shadow: 0 0 15px #b266ff;
+}
+.nether-criatura h2:hover{
+    color: #ff9900;
+    text-shadow:
+        0 0 10px #ff4500,
+        0 0 20px #ff7700;
+}
+.texto-mobs-cuevas h2:hover,
+.texto-item-cuevas h2:hover{
+    color: #7ef5ff;
+    text-shadow: 0 0 15px #00d9ff;
+}
+.img-item-end img:hover,
+.img-item-cuevas img:hover{
+    transform: rotate(5deg) scale(1.1);
+    transition: 0.3s;
+}
+.item-end:hover,
+.estructura-end:hover,
+.div-item-cuevas:hover,
+.Material:hover{
+    border-left-width: 12px;
+    transition: 0.3s;
+}
+.logo:hover{
+    filter: drop-shadow(0 0 12px white);
+    transform: rotate(5deg);
+    transition: 0.3s;
+}
+/* =========================
+   TRANSICIONES ENTRE MUNDOS
+========================= */
+
+#transicion{
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    pointer-events: none;
+}
+
+/* OVERWORLD */
+
+#transicion.overworld{
+    background: radial-gradient(
+        circle,
+        #4CAF50,
+        #1B5E20,
+        black
+    );
+    animation: abrirOverworld 1s forwards;
+}
+
+/* CUEVAS */
+
+#transicion.caves{
+    background-image: url('/static/images/stone_break.gif');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    opacity: 1;
+
+    animation: romperPiedra 1.2s forwards;
+}
+
+/* NETHER */
+
+#transicion.nether{
+    background-image: url('/static/images/portal.gif');
+    background-size: cover;
+    animation: abrirNether 1s forwards;
+}
+
+#transicion.end{
+    background-image: url('/static/images/portal_end.gif');
+    background-size: cover;
+    animation: abrirEnd 1s forwards;
+}
+
+/* ANIMACIONES */
+
+@keyframes abrirOverworld{
+    from{
+        opacity:0;
+        transform:scale(0);
+    }
+    to{
+        opacity:1;
+        transform:scale(5);
+    }
+}
+
+@keyframes abrirCuevas{
+    from{
+        opacity:0;
+        clip-path:circle(0%);
+    }
+    to{
+        opacity:1;
+        clip-path:circle(150%);
+    }
+}
+
+@keyframes abrirNether{
+    0%{
+        opacity:0;
+        transform:scale(0);
+    }
+
+    100%{
+        opacity:1;
+        transform:scale(8);
+    }
+}
+
+@keyframes abrirEnd{
+    0%{
+        opacity:0;
+        transform:scale(0.1);
+    }
+
+    100%{
+        opacity:1;
+        transform:scale(8);
+    }
+}
+
+#transicion.overworld,
+#transicion.caves,
+#transicion.nether,
+#transicion.end{
+    opacity: 1 !important;
 }

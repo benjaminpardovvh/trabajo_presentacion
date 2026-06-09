@@ -16,12 +16,11 @@
                 <div class="logodiv">
                     <a
                         href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQemG36XY16XpQ_nPccgK0RSijWy_nwP2O5fw&s">
-                        <i class="bi bi-controller"></i><img class="logo"
-                            src="/static/images/logo.svg">
+                        <i class="bi bi-controller"></i><img class="logo" src="/static/images/logo.svg">
                     </a>
                 </div>
                 <div class="nav-links">
-                    <a class="nig O" href="/index.html">El Overworld</a>
+                    <a class="select O" href="/index.html">El Overworld</a>
                     <a class="nig C" href="/pages/caves.html">Cuevas</a>
                     <a class="nig N" href="/pages/nether.html">El Nether</a>
                     <a class="nig E" href="/pages/end.html">El End</a>
@@ -49,25 +48,30 @@
                     <p>El bioma de llanuras (plains) en Minecraft es un terreno plano y abierto caracterizado
                         por pasto, hierba alta y pocos árboles. Es considerado uno de los
                         mejores biomas para principiantes por su visibilidad y facilidad para construir.</p>
-                    </div>
+                </div>
+                <div class="img-bioma">
+
+                </div>
                 <div class="elementos-llanura">
                     <div class="mobs-over">
                         <div class="mob-over">
                             <div class="texto-mob-over">
                                 <h2>Oveja:</h2> <!--descripciones cortas-->
-                                <p>La oveja es una de las criaturas pasivas más importantes y comunes de Minecraft. 
-                                Su función principal es proveer lana y carne de cordero,
-                                elementos esenciales para sobrevivir (como fabricar una cama) y construir en el juego.</p> <!--Utiliza ese formato-->
+                                <p>La oveja es una de las criaturas pasivas más importantes y comunes de Minecraft.
+                                    Su función principal es proveer lana y carne de cordero,
+                                    elementos esenciales para sobrevivir (como fabricar una cama) y construir en el
+                                    juego.</p> <!--Utiliza ese formato-->
                             </div>
                             <div class="img-mob-over">
-                                <img class="mob" src="/static/images/oveja.webp" alt="oveja"><!--descripciones como la de arriba-->
+                                <img class="mob" src="/static/images/oveja.webp"
+                                    alt="oveja"><!--descripciones como la de arriba-->
                             </div>
                         </div>
                         <div class="mob-over">
                             <div class="texto-mob-over">
                                 <h2>Vaca:</h2>
                                 <p>La vaca es la segunda criatura pasiva mas importantes y comunes de Minecraft.
-                                    Sus principales funciones son proveer cuero, leche y filete, 
+                                    Sus principales funciones son proveer cuero, leche y filete,
                                     se puede obtener leche al ordeñar, se requiere un cubo
                                 </p>
                             </div>
@@ -90,7 +94,7 @@
                             <div class="texto-mob-over">
                                 <h2>Abeja:</h2>
                                 <p>La abeja es una criatura neutral, la cual atacara si:
-                                    <ol>
+                                <ol>
                                     <li>
                                         se destruye su colmena
                                     </li>
@@ -100,9 +104,9 @@
                                     <li>
                                         es atacada por el jugador u otra criatura
                                     </li>
-                                    </ol>
-                                    su principal funcion es recolectar polen y dejarlo en su colmena 
-                                    y asi obtener miel, se requiere una fogata para poder hacerlo
+                                </ol>
+                                su principal funcion es recolectar polen y dejarlo en su colmena
+                                y asi obtener miel, se requiere una fogata para poder hacerlo
                                 </p>
                             </div>
                             <div class="img-mob-over">
@@ -112,8 +116,8 @@
                         <div class="mob-over">
                             <div class="texto-mob-over">
                                 <h2>Pollo:</h2>
-                                <p>El pollo es una criatura pacifica que es muy 
-                                    frajil en comparacion a otros animales de granja (cerdo, vaca, oveja), 
+                                <p>El pollo es una criatura pacifica que es muy
+                                    frajil en comparacion a otros animales de granja (cerdo, vaca, oveja),
                                     provee plumas (probabilidad) y pollo crudo (asegurado)
                                 </p>
                             </div>
@@ -895,16 +899,19 @@
     <footer class="diccionario-over">
         <h2>diccionario</h2>
         <ul>
-        <li>Mob: Entidad que puede ser amable, neutral u hostil con el jugador.</li>
-        <li>Overworld: El mundo principal del juego</li>
-        <li>Biomas: secciones del mundo con caracteristicas unicas,
-            pueden ser definidas por su tipo de vegetacion y la apariencia de los animales
-        </li>
-        <li>Craftear: crear o transformar un objeto a travez de una mesa de crafteo
-            y teniendo los materiales necesarios para poder usar la formula
-        </li>
+            <li>Mob: Entidad que puede ser amable, neutral u hostil con el jugador.</li>
+            <li>Overworld: El mundo principal del juego</li>
+            <li>Biomas: secciones del mundo con caracteristicas unicas,
+                pueden ser definidas por su tipo de vegetacion y la apariencia de los animales
+            </li>
+            <li>Craftear: crear o transformar un objeto a travez de una mesa de crafteo
+                y teniendo los materiales necesarios para poder usar la formula
+            </li>
         </ul>
     </footer>
+    <div id="transicion"></div>
+    <script src="/static/js/script.js"></script>
+    <audio id="portalSound" src="/static/audio/portal.mp3"></audio>
 </body>
 
 </html>
