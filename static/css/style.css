@@ -1,540 +1,422 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'MinecraftFont', Arial, Helvetica, sans-serif;
-}
-
-@font-face {
-    font-family: 'MinecraftFont';
-    src: url('/static/fuente/Minecraft.ttf') format('truetype');
-}
-
-body {
-    background-color: #1e1e1e;
-    color: white;
-    line-height: 1.6;
-}
-
-/* =========================
-   NAVBAR
-========================= */
-
-.header {
-    height: 150px;
-}
-
-.navbar {
-    background-color: #2d5a27;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 150px;
-    padding: 15px 40px;
-    border-bottom: 4px solid #7c5a35;
-}
-.nav-links {
-    display: flex;
-    gap: 25px;
-}
-
-.nav-links a {
-    text-decoration: none;
-    color: white;
-    font-weight: bold;
-    transition: all .3s;
-}
-
-.O:hover{
-    text-shadow: 0 0 10px #4CAF50;
-    background-color: #9af19d;
-    background-image: none;
-    transition: all 0.6s ease;
-    transform: scale(1.2);
-}
-
-.C:hover{
-    background-color: rgb(163, 163, 163);
-    text-shadow: 0 0 10px #9E9E9E;
-    background-image: none;
-    transform: scale(1.2);
-}
-
-.N:hover{
-    background-color: #FF4500;
-    text-shadow: 0 0 10px #FF4500;
-    background-image: none;
-    transition: all 0.6s ease;
-    transform: scale(1.2);
-}
-
-.E:hover{
-    background-color: #A020F0;
-    text-shadow: 0 0 10px #A020F0;
-    background-image: none;
-    transition: all 0.6s ease;
-    transform: scale(1.2);
-}
-
-/* =========================
-   INTRODUCCIÓN
-========================= */
-
-.intro-over {
-    background: linear-gradient(rgba(0, 0, 0, .7),
-            rgba(0, 0, 0, .7));
-    padding: 50px;
-    text-align: center;
-}
-
-.intro-over-texto {
-    max-width: 1000px;
-    margin: auto;
-}
-
-.intro-over-texto p {
-    margin-bottom: 20px;
-    font-size: 1.1rem;
-}
-
-/* =========================
-   BIOMAS
-========================= */
-
-.bioma-llanura,
-.bioma-bosques,
-.bioma-montañas,
-.bioma-desiertos,
-.bioma-Raros {
-    padding: 40px;
-    margin: 30px;
-    background-color: #2b2b2b;
-    border: 3px solid #4e7c3f;
-    border-radius: 15px;
-}
-
-.intro-bioma-over {
-    text-align: center;
-    margin-bottom: 30px;
-}
-
-.intro-bioma-over h2 {
-    font-size: 2rem;
-    color: #6dff4f;
-    margin-bottom: 15px;
-}
-.img-bioma{
-    width: 50%px;
-    height: 400px;
-    background-size: cover;
-    background: url(/static/images/Plains.webp);
-    border-radius: 20px;
-    border: #2d5a27 3px solid;
-    margin-bottom: 20px;
-}
-/* =========================
-   MOBS
-========================= */
-
-.mobs-over {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-}
-
-.mob-over {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #3a3a3a;
-    padding: 20px;
-    border-radius: 10px;
-    border-left: 8px solid #4caf50;
-}
-
-.texto-mob-over {
-    flex: 1;
-    padding-right: 20px;
-}
-
-.texto-mob-over h2 {
-    color: #8cff66;
-    margin-bottom: 10px;
-}
-
-.img-mob-over {
-    width: 180px;
-    text-align: center;
-}
-
-.mob,
-.mobC,
-.img-mob-over img {
-    width: 150px;
-    max-width: 100%;
-    object-fit: contain;
-}
-
-/* =========================
-   LISTAS
-========================= */
-
-ol {
-    margin-left: 20px;
-    margin-top: 10px;
-    margin-bottom: 10px;
-}
-
-li {
-    margin-bottom: 5px;
-}
-
-/* =========================
-   MATERIALES
-========================= */
-
-.mats {
-    margin-top: 40px;
-}
-
-.mats h2 {
-    text-align: center;
-    color: #ffc107;
-    margin-bottom: 25px;
-}
-
-.Material {
-    display: flex;
-    align-items: center;
-    gap: 20px;
-    background-color: #383838;
-    padding: 15px;
-    margin-bottom: 15px;
-    border-radius: 10px;
-}
-
-.img-mats-over img {
-    width: 100px;
-    height: 100px;
-    object-fit: contain;
-}
-
-.texto-mats-over h3 {
-    color: #ffdc73;
-}
-
-/* =========================
-   FOOTER
-========================= */
-
-.diccionario-over {
-    margin-top: 50px;
-    padding: 30px;
-    background-color: #111;
-    border-top: 4px solid #4caf50;
-}
-
-.diccionario-over h2 {
-    color: #8cff66;
-    margin-bottom: 15px;
-}
-
-.diccionario-over ul {
-    margin-left: 20px;
-}
-
-.diccionario-over li {
-    margin-bottom: 10px;
-}
-
-/* =========================
-   RESPONSIVE
-========================= */
-
-@media (max-width: 768px) {
-
-    .navbar {
-        flex-direction: column;
-        gap: 15px;
-    }
-
-    .nav-links {
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-
-    .mob-over {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .texto-mob-over {
-        padding-right: 0;
-        margin-bottom: 15px;
-    }
-
-    .Material {
-        flex-direction: column;
-        text-align: center;
-    }
-}
-
-.O {
-    font-size: 40px;
-    font-weight: bold;
-    color: transparent;
-    background-image: url('/static/images/tierra.webp');
-    background-clip: text;
-    background-size: contain;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent
-}
-
-.N {
-    font-size: 40px;
-    font-weight: bold;
-    color: transparent;
-    background-image: url('/static/images/netherrack.jpg');
-    background-size:contain;
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent
-}
-
-.C {
-    font-size: 40px;
-    font-weight: bold;
-    color: transparent;
-    background-image: url('/static/images/piedra.webp');
-    background-size:contain;
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    transition: all 0.6 ease;
-}
-
-.E {
-    font-size: 40px;
-    font-weight: bold;
-    color: transparent;
-    background-image: url('/static/images/end\ stone.jpg');
-    background-size:contain;
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
-
-.body-n{
-    font-family: Arial, Helvetica, sans-serif;
-    background-color: #120707;
-    color: #f5f5f5;
-    line-height: 1.6;
-}
-
-/* =========================
-   NAVBAR
-========================= */
-
-.navbar-n{
-    background: linear-gradient(90deg,#3b0000,#6b0f0f);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 15px 40px;
-    border-bottom: 4px solid #ff5e00;
-    height: 150px
-}
-
-.logo{
-    width: 300px;
-    transition:all .3s ease, margin-left 0.5s ease;
-}
-
-.logo:hover{
-    transform: scale(1.4);
-    margin-left: 50px;
-}
-
-.select{
-    color: white;
-    font-size: 40px;
-    font-weight: bold;
-
-}
-.nav-links-n{
-    display: flex;
-    gap: 25px;
-    height: 150px;
-    align-items: center;
-}
-
-.nav-links-n a{
-    text-decoration: none;
-    color: white;
-    font-weight: bold;
-    transition: .3s;
-}
-
-/* =========================
-   CONTENIDO PRINCIPAL
-========================= */
-
-.main-n{
-    width: 90%;
-    max-width: 1200px;
-    margin: auto;
-    padding: 40px 0;
-}
-
-/* =========================
-   PRESENTACIÓN
-========================= */
-
-.presentacion-criaturas-nether{
-    text-align: center;
-    background: linear-gradient(
-        rgba(60,0,0,.9),
-        rgba(20,0,0,.9)
-    );
-    padding: 40px;
-    border-radius: 15px;
-    border: 2px solid #ff4500;
-    margin-bottom: 40px;
-}
-
-.presentacion-criaturas-nether h1{
-    color: #ff7b00;
-    font-size: 3rem;
-    margin-bottom: 20px;
-    text-shadow: 0 0 15px #ff4500;
-}
-
-.presentacion-criaturas-nether p{
-    font-size: 1.1rem;
-    max-width: 800px;
-    margin: auto;
-}
-
-/* =========================
-   LISTA DE CRIATURAS
-========================= */
-
-.lista-criaturas-nether{
-    display: flex;
-    flex-direction: column;
-    gap: 30px;
-}
-
-/* =========================
-   TARJETA DE CRIATURA
-========================= */
-
-.nether-criatura{
-    background-color: #2a0d0d;
-    border-left: 8px solid #ff4500;
-    border-radius: 15px;
-    padding: 25px;
-    transition: .3s;
-    box-shadow: 0 0 15px rgba(255,69,0,.2);
-}
-
-.nether-criatura:hover{
-    transform: translateY(-5px);
-    box-shadow: 0 0 25px rgba(255,69,0,.5);
-}
-
-.nether-criatura h2{
-    color: #ff9500;
-    margin-bottom: 15px;
-    font-size: 2rem;
-}
-
-/* =========================
-   DESCRIPCIÓN
-========================= */
-
-.descripcion-criatura-nether ul{
-    list-style: none;
-}
-
-.descripcion-criatura-nether li{
-    margin-bottom: 15px;
-    background-color: #381414;
-    padding: 15px;
-    border-radius: 10px;
-}
-
-.descripcion-criatura-nether h4{
-    display: inline;
-    color: #ffae42;
-}
-
-/* =========================
-   SCROLLBAR
-========================= */
-
-::-webkit-scrollbar{
-    width: 12px;
-}
-
-::-webkit-scrollbar-track{
-    background: #150808;
-}
-
-::-webkit-scrollbar-thumb{
-    background: #ff4500;
-    border-radius: 10px;
-}
-
-::-webkit-scrollbar-thumb:hover{
-    background: #ff7b00;
-}
-
-/* =========================
-   RESPONSIVE
-========================= */
-
-@media (max-width: 768px){
-
-    .navbar{
-        flex-direction: column;
-        gap: 15px;
-    }
-
-    .nav-links{
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-
-    .presentacion-criaturas-nether h1{
-        font-size: 2rem;
-    }
-
-    .nether-criatura h2{
-        font-size: 1.5rem;
-    }
-}
-
-/* =========================
-   ESTILOS GENERALES
-========================= */
+/* ==================================================
+   RESET Y FUENTE
+================================================== */
 
 *{
     margin:0;
     padding:0;
     box-sizing:border-box;
+    border: red 1px solid;
+    font-family:'MinecraftFont', Arial, Helvetica, sans-serif;
 }
 
-.body-c{
-    font-family: Arial, Helvetica, sans-serif;
-    background-color:#111418;
-    color:#e5e5e5;
+@font-face{
+    font-family:'MinecraftFont';
+    src:url('/static/fuente/Minecraft.ttf') format('truetype');
+}
+
+body{
+    background:#1e1e1e;
+    color:white;
     line-height:1.6;
 }
 
-/* =========================
-   NAVBAR
-========================= */
+/* ==================================================
+   COMPONENTES GLOBALES
+================================================== */
+
+.header,
+.header-e{
+    height:150px;
+}
+
+.logo{
+    width:300px;
+    transition:all .3s ease, margin-left .5s ease;
+}
+
+.logo:hover{
+    filter:drop-shadow(0 0 12px white);
+    transform:rotate(5deg);
+    margin-left:50px;
+}
+
+.select{
+    color:white;
+    font-size:40px;
+    font-weight:bold;
+}
+
+/* ==================================================
+   LINKS DE MUNDOS
+================================================== */
+
+.O,
+.C,
+.N,
+.E{
+    font-size:40px;
+    font-weight:bold;
+    color:transparent;
+    background-size:contain;
+    background-clip:text;
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+}
+
+.O{
+    background-image:url('/static/images/tierra.webp');
+}
+
+.C{
+    background-image:url('/static/images/piedra.webp');
+}
+
+.N{
+    background-image:url('/static/images/netherrack.jpg');
+}
+
+.E{
+    background-image:url('/static/images/end stone.jpg');
+}
+
+/* ==================================================
+   HOVER LINKS MUNDOS
+================================================== */
+
+.O:hover{
+    text-shadow:0 0 10px #4CAF50;
+    background-color:#9af19d;
+    background-image:none;
+    transform:scale(1.2);
+    transition:.6s;
+}
+
+.C:hover{
+    text-shadow:0 0 10px #9E9E9E;
+    background-color:#a3a3a3;
+    background-image:none;
+    transform:scale(1.2);
+}
+
+.N:hover{
+    text-shadow:0 0 10px #FF4500;
+    background-color:#FF4500;
+    background-image:none;
+    transform:scale(1.2);
+    transition:.6s;
+}
+
+.E:hover{
+    text-shadow:0 0 10px #A020F0;
+    background-color:#A020F0;
+    background-image:none;
+    transform:scale(1.2);
+    transition:.6s;
+}
+
+/* ==================================================
+   NAVBAR OVERWORLD
+================================================== */
+
+.navbar{
+    background:#2d5a27;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    height:150px;
+    padding:15px 40px;
+    border-bottom:4px solid #7c5a35;
+}
+
+.nav-links{
+    display:flex;
+    gap:25px;
+}
+
+.nav-links a{
+    text-decoration:none;
+    color:white;
+    font-weight:bold;
+    transition:.3s;
+}
+
+/* ==================================================
+   OVERWORLD
+================================================== */
+
+.intro-over{
+    background:linear-gradient(
+        rgba(0,0,0,.7),
+        rgba(0,0,0,.7)
+    );
+    padding:50px;
+    text-align:center;
+}
+
+.intro-over-texto{
+    max-width:1000px;
+    margin:auto;
+}
+
+.intro-over-texto p{
+    font-size:1.1rem;
+    margin-bottom:20px;
+}
+
+.bioma-llanura,
+.bioma-bosques,
+.bioma-montañas,
+.bioma-desiertos,
+.bioma-Raros{
+    padding:40px;
+    margin:30px;
+    background:#2b2b2b;
+    border:3px solid #4e7c3f;
+    border-radius:15px;
+}
+
+.intro-bioma-over{
+    text-align:center;
+    margin-bottom:30px;
+}
+
+.intro-bioma-over h2{
+    font-size:2rem;
+    color:#6dff4f;
+    margin-bottom:15px;
+}
+
+.img-bioma{
+    height:400px;
+    background:url('/static/images/Plains.webp');
+    background-size:cover;
+    border-radius:20px;
+    border:3px solid #2d5a27;
+    margin-bottom:20px;
+}
+
+.mobs-over{
+    display:flex;
+    flex-direction:column;
+    gap:20px;
+}
+
+.mob-over{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    background:#3a3a3a;
+    padding:20px;
+    border-radius:10px;
+    border-left:8px solid #4caf50;
+}
+
+.texto-mob-over{
+    flex:1;
+    padding-right:20px;
+}
+
+.texto-mob-over h2{
+    color:#8cff66;
+    margin-bottom:10px;
+}
+
+.img-mob-over{
+    width:180px;
+    text-align:center;
+}
+
+.mob,
+.mobC,
+.img-mob-over img{
+    width:150px;
+    max-width:100%;
+    object-fit:contain;
+}
+
+.mats{
+    margin-top:40px;
+}
+
+.mats h2{
+    text-align:center;
+    color:#ffc107;
+    margin-bottom:25px;
+}
+
+.Material{
+    display:flex;
+    align-items:center;
+    gap:20px;
+    background:#383838;
+    padding:15px;
+    margin-bottom:15px;
+    border-radius:10px;
+}
+
+.img-mats-over img{
+    width:100px;
+    height:100px;
+    object-fit:contain;
+}
+
+.texto-mats-over h3{
+    color:#ffdc73;
+}
+
+.diccionario-over{
+    margin-top:50px;
+    padding:30px;
+    background:#111;
+    border-top:4px solid #4caf50;
+}
+
+.diccionario-over h2{
+    color:#8cff66;
+    margin-bottom:15px;
+}
+
+.diccionario-over ul{
+    margin-left:20px;
+}
+
+/* ==================================================
+   NETHER
+================================================== */
+
+.body-n{
+    background:#120707;
+    color:#f5f5f5;
+}
+
+.navbar-n{
+    background:linear-gradient(90deg,#3b0000,#6b0f0f);
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:15px 40px;
+    border-bottom:4px solid #ff5e00;
+    height:150px;
+}
+
+.nav-links-n{
+    display:flex;
+    gap:25px;
+    align-items:center;
+    height:150px;
+}
+
+.nav-links-n a{
+    text-decoration:none;
+    color:white;
+    font-weight:bold;
+}
+
+.main-n{
+    width:90%;
+    max-width:1200px;
+    margin:auto;
+    padding:40px 0;
+}
+
+.presentacion-criaturas-nether{
+    text-align:center;
+    background:linear-gradient(
+        rgba(60,0,0,.9),
+        rgba(20,0,0,.9)
+    );
+    padding:40px;
+    border-radius:15px;
+    border:2px solid #ff4500;
+    margin-bottom:40px;
+}
+
+.presentacion-criaturas-nether h1{
+    color:#ff7b00;
+    font-size:3rem;
+    margin-bottom:20px;
+    text-shadow:0 0 15px #ff4500;
+}
+
+.lista-criaturas-nether{
+    display:flex;
+    flex-direction:column;
+    gap:30px;
+}
+
+.nether-criatura{
+    display: flex;
+    flex-direction: column;
+    background:#2a0d0d;
+    border-left:8px solid #ff4500;
+    border-radius:15px;
+    padding:25px;
+    transition:.3s;
+    box-shadow:0 0 15px rgba(255,69,0,.2);
+}
+.div-mob-n{
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+}
+.img-mob-n{
+    display: flex;
+    width: 40%;
+    align-items: center;
+}
+.img-mob-n img{
+    width: 100%;
+    height: 90%;
+}
+.descripcion-criatura-nether{
+    display: flex;
+    width: 50%;
+    flex-direction: column;
+    gap: 20px;
+}
+.nether-criatura:hover{
+    transform:translateY(-8px) scale(1.02);
+    box-shadow:0 0 25px rgba(255,69,0,.5);
+}
+
+.nether-criatura h2{
+    color:#ff9500;
+    margin-bottom:15px;
+    font-size: 40px;
+}
+
+.nether-criatura h2:hover{
+    color:#ff9900;
+    text-shadow:
+        0 0 10px #ff4500,
+        0 0 20px #ff7700;
+}
+
+.descripcion-criatura-nether ul{
+    list-style:none;
+}
+
+.descripcion-criatura-nether li{
+    margin-bottom:15px;
+    background:#381414;
+    padding:15px;
+    border-radius:10px;
+}
+
+.descripcion-criatura-nether h4{
+    display:inline;
+    color:#ffae42;
+}
+/* ==================================================
+   CUEVAS
+================================================== */
+
+.body-c{
+    background:#111418;
+    color:#e5e5e5;
+    line-height:1.6;
+}
 
 .navbar-c{
     background:linear-gradient(90deg,#1d1f24,#31343d);
@@ -543,7 +425,7 @@ li {
     align-items:center;
     padding:15px 40px;
     border-bottom:4px solid #00c8ff;
-    height: 150px;
+    height:150px;
 }
 
 .nav-links-c{
@@ -555,12 +437,7 @@ li {
     color:white;
     text-decoration:none;
     font-weight:bold;
-    transition:.3s;
 }
-
-/* =========================
-   INTRODUCCIÓN
-========================= */
 
 .intro-cuevas{
     display:flex;
@@ -595,10 +472,6 @@ li {
     max-width:450px;
 }
 
-/* =========================
-   BIOMAS
-========================= */
-
 .bioma-cuevas{
     margin:30px;
     padding:30px;
@@ -618,10 +491,6 @@ li {
     margin-bottom:15px;
 }
 
-/* =========================
-   MOBS Y CRIATURAS
-========================= */
-
 .div-mobs-cuevas{
     display:flex;
     align-items:center;
@@ -635,7 +504,7 @@ li {
 }
 
 .div-mobs-cuevas:hover{
-    transform:translateY(-5px);
+    transform:translateY(-8px) scale(1.02);
     box-shadow:0 0 20px rgba(0,217,255,.3);
 }
 
@@ -648,6 +517,11 @@ li {
     margin-bottom:10px;
 }
 
+.texto-mobs-cuevas h2:hover{
+    color:#7ef5ff;
+    text-shadow:0 0 15px #00d9ff;
+}
+
 .img-mob-cuevas{
     flex:0 0 220px;
     text-align:center;
@@ -657,10 +531,6 @@ li {
     width:200px;
     max-width:100%;
 }
-
-/* =========================
-   ITEMS
-========================= */
 
 .Items-cuevas{
     padding:30px;
@@ -682,19 +552,21 @@ li {
 
 .div-item-cuevas:hover{
     box-shadow:0 0 15px rgba(91,232,255,.4);
+    border-left-width:12px;
 }
 
 .img-item-cuevas img{
     width:100px;
 }
 
+.img-item-cuevas img:hover{
+    transform:rotate(5deg) scale(1.1);
+    transition:.3s;
+}
+
 .texto-item-cuevas h2{
     color:#5be8ff;
 }
-
-/* =========================
-   ESTRUCTURAS
-========================= */
 
 .estructuras-cuevas{
     padding:30px;
@@ -724,79 +596,23 @@ li {
     width:220px;
 }
 
-/* =========================
-   SCROLLBAR
-========================= */
-
-::-webkit-scrollbar{
-    width:12px;
-}
-
-::-webkit-scrollbar-track{
-    background:#111418;
-}
-
-::-webkit-scrollbar-thumb{
-    background:#00d9ff;
-    border-radius:10px;
-}
-
-/* =========================
-   RESPONSIVE
-========================= */
-
-@media(max-width:768px){
-
-    .intro-cuevas{
-        flex-direction:column;
-        text-align:center;
-    }
-
-    .div-mobs-cuevas,
-    .div-item-cuevas,
-    .div-estructura-cuevas{
-        flex-direction:column;
-        text-align:center;
-    }
-
-    .navbar-c{
-        flex-direction:column;
-        gap:15px;
-    }
-
-    .nav-links-c{
-        flex-wrap:wrap;
-        justify-content:center;
-    }
-
-    .intro-cuevas-texto h1{
-        font-size:2rem;
-    }
-}
+/* ==================================================
+   END
+================================================== */
 
 .body-e{
-    font-family: Arial, Helvetica, sans-serif;
-    background-color:#09070d;
+    background:#09070d;
     color:#f2f2f2;
-    line-height:1.6;
-}
-
-/* =========================
-   NAVBAR
-========================= */
-
-.header-e{
-    height: 150px;
 }
 
 .navbar-e{
-    background: linear-gradient(90deg,#180023,#2d1040);
+    background:linear-gradient(90deg,#180023,#2d1040);
     display:flex;
     justify-content:space-between;
     align-items:center;
     padding:15px 40px;
     border-bottom:4px solid #b266ff;
-    height: 150px;
+    height:150px;
 }
 
 .nav-links-e{
@@ -808,12 +624,7 @@ li {
     text-decoration:none;
     color:white;
     font-weight:bold;
-    transition:.3s;
 }
-
-/* =========================
-   INTRODUCCIÓN
-========================= */
 
 .intro-end{
     display:flex;
@@ -849,29 +660,14 @@ li {
     border-radius:15px;
 }
 
-/* =========================
-   TITULOS DE SECCIÓN
-========================= */
-
-.titulo-end{
-    text-align:center;
-    margin-bottom:30px;
-}
-
-.titulo-end h2{
-    color:#c68cff;
-    font-size:2rem;
-}
-
-/* =========================
-   CRIATURAS
-========================= */
-
-.criaturas-end{
+.criaturas-end,
+.bloques-end,
+.estructuras-end{
     padding:40px;
 }
 
-.end-criatura{
+.end-criatura,
+.estructura-end{
     display:flex;
     align-items:center;
     justify-content:space-between;
@@ -886,56 +682,52 @@ li {
 
 .end-criatura-f{
     display:flex;
-    flex-direction: column;
+    flex-direction:column;
     align-items:center;
-    justify-content:space-between;
     gap:25px;
     background:#1b1025;
     margin-bottom:25px;
     padding:25px;
     border-left:8px solid #b266ff;
     border-radius:12px;
-    transition:.3s;
 }
 
-.end-criatura:hover{
-    transform:translateY(-5px);
-    box-shadow:0 0 20px rgba(178,102,255,.4);
-}
-
+.end-criatura:hover,
 .end-criatura-f:hover{
-    transform:translateY(-5px);
+    transform:translateY(-8px) scale(1.02);
     box-shadow:0 0 20px rgba(178,102,255,.4);
 }
 
-.img-criatura-end .boss{
-    width:100%;
-}
-.texto-criatura-end{
-    flex:1;
-}
-
-.texto-criatura-end h2{
+.texto-criatura-end h2,
+.texto-item-end h2,
+.texto-estructura-end h2{
     color:#d6a8ff;
     margin-bottom:10px;
 }
 
-.img-criatura-end{
-    flex:0 0 220px;
-    text-align:center;
+.texto-criatura-end h2:hover,
+.texto-item-end h2:hover,
+.texto-estructura-end h2:hover{
+    text-shadow:0 0 15px #b266ff;
 }
 
 .img-criatura-end img{
     width:200px;
-    max-width:100%;
 }
 
-/* =========================
-   BLOQUES Y MATERIALES
-========================= */
+.img-item-end img{
+    width:120px;
+}
 
-.bloques-end{
-    padding:40px;
+.img-estructura-end img{
+    width:400px;
+}
+
+.img-criatura-end img:hover,
+.img-estructura-end img:hover,
+.img-item-end img:hover{
+    transform:scale(1.1);
+    transition:.3s;
 }
 
 .item-end{
@@ -952,220 +744,166 @@ li {
 
 .item-end:hover{
     box-shadow:0 0 15px rgba(198,140,255,.5);
+    border-left-width:12px;
 }
 
-.texto-item-end{
-    flex:1;
+.estruc-e{
+    border-radius:20px;
+    border:2px solid #b700ff;
 }
 
-.texto-item-end h2{
-    color:#d6a8ff;
-    margin-bottom:10px;
+/* ==================================================
+   HOVERS GLOBALES
+================================================== */
+
+h1:hover,
+h2:hover{
+    letter-spacing:2px;
+    transition:.3s;
 }
 
-.img-item-end img{
-    width:120px;
-}
-
-/* =========================
-   ESTRUCTURAS
-========================= */
-
-.estructuras-end{
-    padding:40px;
-}
-
-.estructura-end{
-    display:flex;
-    align-items:center;
-    gap:25px;
-    justify-content: space-between;
-    background:#1d1027;
-    margin-bottom:20px;
-    padding:25px;
-    border-radius:12px;
-    border-left:6px solid #b266ff;
-}
-
-.texto-estructura-end{
-    flex:1;
-}
-
-.texto-estructura-end h2{
-    color:#d6a8ff;
-    margin-bottom:10px;
-}
-
-.img-estructura-end{
-    width: 400px;
-    max-width: 50%;
-}
-
-.img-estructura-end img{
-    width: 400px;
-}
-
-/* =========================
-   HOVER NAVBAR
-========================= */
-
-.O:hover{
-    color:#4CAF50;
-    text-shadow:0 0 10px #4CAF50;
-}
-
-.C:hover{
-    color:#00d9ff;
-    text-shadow:0 0 10px #00d9ff;
-}
-
-.N:hover{
-    color:#ff4500;
-    text-shadow:0 0 10px #ff4500;
-}
-
-.E:hover{
-    color:#b266ff;
-    text-shadow:0 0 10px #b266ff;
-}
-
-/* =========================
+/* ==================================================
    SCROLLBAR
-========================= */
+================================================== */
 
 ::-webkit-scrollbar{
     width:12px;
 }
 
 ::-webkit-scrollbar-track{
-    background:#09070d;
+    background:#111;
 }
 
 ::-webkit-scrollbar-thumb{
-    background:#b266ff;
     border-radius:10px;
+    background:#00d9ff;
 }
 
 ::-webkit-scrollbar-thumb:hover{
     background:#d6a8ff;
 }
 
-/* =========================
+/* ==================================================
    RESPONSIVE
-========================= */
+================================================== */
 
 @media(max-width:768px){
 
-    .navbar-e{
+    .navbar,
+    .navbar-c,
+    .navbar-e,
+    .navbar-n{
         flex-direction:column;
         gap:15px;
     }
 
-    .nav-links-e{
+    .nav-links,
+    .nav-links-c,
+    .nav-links-e,
+    .nav-links-n{
         flex-wrap:wrap;
         justify-content:center;
     }
 
+    .intro-cuevas,
     .intro-end{
         flex-direction:column;
         text-align:center;
     }
 
+    .mob-over,
+    .div-mobs-cuevas,
+    .div-item-cuevas,
+    .div-estructura-cuevas,
     .end-criatura,
     .item-end,
-    .estructura-end{
+    .estructura-end,
+    .Material{
         flex-direction:column;
         text-align:center;
     }
 
-    .intro-end-texto h1{
+    .intro-cuevas-texto h1,
+    .intro-end-texto h1,
+    .presentacion-criaturas-nether h1{
         font-size:2rem;
     }
 }
 
-.estruc-e{
-    border-radius: 20px;
-    border: #b700ff 2px solid;
-}
-
-.nether-criatura:hover,
-.end-criatura:hover,
-.div-mobs-cuevas:hover{
-    transform: translateY(-8px) scale(1.02);
-}
-
-.img-criatura-end img:hover,
-.img-mob-cuevas img:hover,
-.img-mob-over img:hover,
-.img-item-cuevas img:hover,
-.img-estructura-end img:hover{
-    transform: scale(1.1);
-    transition: 0.3s;
-}
-h1:hover,
-h2:hover{
-    letter-spacing: 2px;
-    transition: 0.3s;
-}
-.texto-criatura-end h2:hover,
-.texto-item-end h2:hover,
-.texto-estructura-end h2:hover{
-    text-shadow: 0 0 15px #b266ff;
-}
-.nether-criatura h2:hover{
-    color: #ff9900;
-    text-shadow:
-        0 0 10px #ff4500,
-        0 0 20px #ff7700;
-}
-.texto-mobs-cuevas h2:hover,
-.texto-item-cuevas h2:hover{
-    color: #7ef5ff;
-    text-shadow: 0 0 15px #00d9ff;
-}
-.img-item-end img:hover,
-.img-item-cuevas img:hover{
-    transform: rotate(5deg) scale(1.1);
-    transition: 0.3s;
-}
-.item-end:hover,
-.estructura-end:hover,
-.div-item-cuevas:hover,
-.Material:hover{
-    border-left-width: 12px;
-    transition: 0.3s;
-}
-.logo:hover{
-    filter: drop-shadow(0 0 12px white);
-    transform: rotate(5deg);
-    transition: 0.3s;
-}
-/* =========================
+/* ==================================================
    TRANSICIONES ENTRE MUNDOS
-========================= */
+================================================== */
 
 #transicion{
-    position: fixed;
-    inset: 0;
-    z-index: 9999;
-    pointer-events: none;
+    position:fixed;
+    inset:0;
+    z-index:9999;
+    pointer-events:none;
+}
+
+/* OVERWORLD */
+
+#transicion.overworld{
+    background-image:url('/static/images/grass_block.png');
+    background-repeat:repeat;
+    background-size:200px;
+    animation:abrirOverworld 1s forwards;
+}
+
+/* CUEVAS */
+
+#transicion.caves{
+    background:
+    repeating-linear-gradient(
+        45deg,
+        #555 0px,
+        #555 40px,
+        #333 40px,
+        #333 80px
+    );
+
+    animation:romperPiedra 1s forwards;
 }
 
 /* NETHER */
 
 #transicion.nether{
-    background-image: url('/static/images/portal.gif');
-    background-size: cover;
-    animation: abrirNether 1s forwards;
+    background-image:url('/static/images/portal.gif');
+    background-size:cover;
+    animation:abrirNether 1s forwards;
 }
+
+/* END */
 
 #transicion.end{
-    background-image: url('/static/images/portal_end.gif');
-    background-size: cover;
-    animation: abrirEnd 1s forwards;
+    background-image:url('/static/images/portal_end.gif');
+    background-size:cover;
+    animation:abrirEnd 1s forwards;
 }
 
-/* ANIMACIONES */
+/* ==================================================
+   KEYFRAMES
+================================================== */
+
+@keyframes abrirOverworld{
+    from{
+        transform:translateY(100%);
+    }
+    to{
+        transform:translateY(0%);
+    }
+}
+
+@keyframes romperPiedra{
+    0%{
+        clip-path:circle(100%);
+    }
+
+    100%{
+        clip-path:circle(0%);
+    }
+}
+
 @keyframes abrirNether{
     0%{
         opacity:0;
@@ -1181,7 +919,7 @@ h2:hover{
 @keyframes abrirEnd{
     0%{
         opacity:0;
-        transform:scale(0.1);
+        transform:scale(.1);
     }
 
     100%{
@@ -1194,5 +932,5 @@ h2:hover{
 #transicion.caves,
 #transicion.nether,
 #transicion.end{
-    opacity: 1 !important;
+    opacity:1 !important;
 }
