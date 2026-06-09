@@ -10,6 +10,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
             const destino = this.href;
 
+            // Limpiar clases anteriores
             transicion.className = "";
 
             if(this.classList.contains("O")){
@@ -30,7 +31,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
             setTimeout(() => {
                 window.location.href = destino;
-            }, 1000);
+            }, 1200);
 
         });
 
