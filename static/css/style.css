@@ -1,815 +1,819 @@
-/* ==================================================
-   RESET Y FUENTE
-================================================== */
 
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:'MinecraftFont', Arial, Helvetica, sans-serif;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border: red 1px solid;
+    font-family: 'MinecraftFont', Arial, Helvetica, sans-serif;
 }
 
-@font-face{
-    font-family:'MinecraftFont';
-    src:url('/static/fuente/Minecraft.ttf') format('truetype');
+@font-face {
+    font-family: 'MinecraftFont';
+    src: url('/static/fuente/Minecraft.ttf') format('truetype');
 }
 
-body{
-    background:#1e1e1e;
-    color:white;
-    line-height:1.6;
+body {
+    background: #1e1e1e;
+    color: white;
+    line-height: 1.6;
 }
 
-/* ==================================================
-   COMPONENTES GLOBALES
-================================================== */
-
-.header,
-.header-e{
-    height:150px;
+.logo {
+    width: 300px;
+    transition: all .3s ease, margin-left .5s ease;
 }
 
-.logo{
-    width:300px;
-    transition:all .3s ease, margin-left .5s ease;
+.logo:hover {
+    filter: drop-shadow(0 0 12px white);
+    transform: rotate(5deg);
+    margin-left: 50px;
 }
 
-.logo:hover{
-    filter:drop-shadow(0 0 12px white);
-    transform:rotate(5deg);
-    margin-left:50px;
-}
-
-.select{
-    color:white;
-    font-size:40px;
-    font-weight:bold;
+.select {
+    color: white;
+    font-size: 40px;
+    font-weight: bold;
 }
 
 /* ==================================================
-   LINKS DE MUNDOS
+LINKS DE MUNDOS
 ================================================== */
 
 .O,
 .C,
 .N,
-.E{
-    font-size:40px;
-    font-weight:bold;
-    color:transparent;
-    background-size:contain;
-    background-clip:text;
-    -webkit-background-clip:text;
-    -webkit-text-fill-color:transparent;
+.E {
+    font-size: 40px;
+    font-weight: bold;
+    color: transparent;
+    background-size: contain;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
-.O{
-    background-image:url('/static/images/tierra.webp');
+.O {
+    background-image: url('/static/images/tierra.webp');
 }
 
-.C{
-    background-image:url('/static/images/piedra.webp');
+.C {
+    background-image: url('/static/images/piedra.webp');
 }
 
-.N{
-    background-image:url('/static/images/netherrack.jpg');
+.N {
+    background-image: url('/static/images/netherrack.jpg');
 }
 
-.E{
-    background-image:url('/static/images/end stone.jpg');
-}
-
-/* ==================================================
-   HOVER LINKS MUNDOS
-================================================== */
-
-.O:hover{
-    text-shadow:0 0 10px #4CAF50;
-    background-color:#9af19d;
-    background-image:none;
-    transform:scale(1.2);
-    transition:.6s;
-}
-
-.C:hover{
-    text-shadow:0 0 10px #9E9E9E;
-    background-color:#a3a3a3;
-    background-image:none;
-    transform:scale(1.2);
-}
-
-.N:hover{
-    text-shadow:0 0 10px #FF4500;
-    background-color:#FF4500;
-    background-image:none;
-    transform:scale(1.2);
-    transition:.6s;
-}
-
-.E:hover{
-    text-shadow:0 0 10px #A020F0;
-    background-color:#A020F0;
-    background-image:none;
-    transform:scale(1.2);
-    transition:.6s;
+.E {
+    background-image: url('/static/images/end stone.jpg');
 }
 
 /* ==================================================
-   NAVBAR OVERWORLD
+HOVER LINKS MUNDOS
 ================================================== */
 
-.navbar{
-    background:#2d5a27;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    height:150px;
-    padding:15px 40px;
-    border-bottom:4px solid #7c5a35;
+.O:hover {
+    text-shadow: 0 0 10px #4CAF50;
+    background-color: #9af19d;
+    background-image: none;
+    transform: scale(1.2);
+    transition: .6s;
 }
 
-.nav-links{
-    display:flex;
-    gap:25px;
+.C:hover {
+    text-shadow: 0 0 10px #9E9E9E;
+    background-color: #a3a3a3;
+    background-image: none;
+    transform: scale(1.2);
 }
 
-.nav-links a{
-    text-decoration:none;
-    color:white;
-    font-weight:bold;
-    transition:.3s;
+.N:hover {
+    text-shadow: 0 0 10px #FF4500;
+    background-color: #FF4500;
+    background-image: none;
+    transform: scale(1.2);
+    transition: .6s;
+}
+
+.E:hover {
+    text-shadow: 0 0 10px #A020F0;
+    background-color: #A020F0;
+    background-image: none;
+    transform: scale(1.2);
+    transition: .6s;
 }
 
 /* ==================================================
-   OVERWORLD
+NAVBAR OVERWORLD
 ================================================== */
 
-.intro-over{
-    background:linear-gradient(
-        rgba(0,0,0,.7),
-        rgba(0,0,0,.7)
-    );
-    padding:50px;
-    text-align:center;
+.navbar {
+    background: #2d5a27;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+    border-bottom: 4px solid #7c5a35;
 }
 
-.intro-over-texto{
-    max-width:1000px;
-    margin:auto;
+.nav-links {
+    display: flex;
+    gap: 25px;
 }
 
-.intro-over-texto p{
-    font-size:1.1rem;
-    margin-bottom:20px;
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    transition: .3s;
+}
+
+/* ==================================================
+OVERWORLD
+================================================== */
+
+.intro-over {
+    background: linear-gradient(rgba(0, 0, 0, .7),
+            rgba(0, 0, 0, .7));
+    padding: 50px;
+    text-align: center;
+}
+
+.intro-over-texto {
+    max-width: 1000px;
+    margin: auto;
+}
+
+.intro-over-texto p {
+    font-size: 1.1rem;
+    margin-bottom: 20px;
 }
 
 .bioma-llanura,
 .bioma-bosques,
 .bioma-montañas,
 .bioma-desiertos,
-.bioma-Raros{
-    padding:40px;
-    margin:30px;
-    background:#2b2b2b;
-    border:3px solid #4e7c3f;
-    border-radius:15px;
+.bioma-Raros {
+    padding: 40px;
+    margin: 30px;
+    background: #2b2b2b;
+    border: 3px solid #4e7c3f;
+    border-radius: 15px;
 }
 
-.intro-bioma-over{
-    text-align:center;
-    margin-bottom:30px;
+.intro-bioma-over {
+    text-align: center;
+    margin-bottom: 30px;
 }
 
-.intro-bioma-over h2{
-    font-size:2rem;
-    color:#6dff4f;
-    margin-bottom:15px;
+.intro-bioma-over h2 {
+    font-size: 2rem;
+    color: #6dff4f;
+    margin-bottom: 15px;
 }
 
-.img-bioma{
-    height:400px;
-    background:url('/static/images/Plains.jpeg');
-    background-size:cover;
-    border-radius:20px;
-    border:3px solid #2d5a27;
-    margin-bottom:20px;
+.img-bioma {
+    height: 400px;
+    background: url('/static/images/Plains.jpeg');
+    background-size: cover;
+    border-radius: 20px;
+    border: 3px solid #2d5a27;
+    margin-bottom: 20px;
 }
 
-.mobs-over{
+.img-bioma-cuevas{
     display:flex;
-    flex-direction:column;
-    gap:20px;
-}
-
-.mob-over{
-    display:flex;
-    justify-content:space-between;
     align-items:center;
-    background:#3a3a3a;
-    padding:20px;
-    border-radius:10px;
-    border-left:8px solid #4caf50;
+    justify-content: center;
+}
+.img-bioma-cuevas img{
+    width:70%;
+}
+.mobs-over {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
 }
 
-.texto-mob-over{
-    flex:1;
-    padding-right:20px;
+.mob-over {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #3a3a3a;
+    padding: 20px;
+    border-radius: 10px;
+    border-left: 8px solid #4caf50;
 }
 
-.texto-mob-over h2{
-    color:#8cff66;
-    margin-bottom:10px;
+.texto-mob-over {
+    flex: 1;
+    padding-right: 20px;
 }
 
-.img-mob-over{
-    width:180px;
-    text-align:center;
+.texto-mob-over h2 {
+    color: #8cff66;
+    margin-bottom: 10px;
+}
+
+.img-mob-over {
+    width: 180px;
+    text-align: center;
 }
 
 .mob,
 .mobC,
-.img-mob-over img{
-    width:150px;
-    max-width:100%;
-    object-fit:contain;
+.img-mob-over img {
+    width: 150px;
+    max-width: 100%;
+    object-fit: contain;
 }
 
-.mats{
-    margin-top:40px;
+.mats {
+    margin-top: 40px;
 }
 
-.mats h2{
-    text-align:center;
-    color:#ffc107;
-    margin-bottom:25px;
+.mats h2 {
+    text-align: center;
+    color: #ffc107;
+    margin-bottom: 25px;
 }
 
-.Material{
-    display:flex;
-    align-items:center;
-    gap:20px;
-    background:#383838;
-    padding:15px;
-    margin-bottom:15px;
-    border-radius:10px;
+.Material {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    background: #383838;
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 10px;
 }
 
-.img-mats-over img{
-    width:100px;
-    height:100px;
-    object-fit:contain;
+.img-mats-over img {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
 }
 
-.texto-mats-over h3{
-    color:#ffdc73;
+.texto-mats-over h3 {
+    color: #ffdc73;
 }
 
-.diccionario-over{
-    margin-top:50px;
-    padding:30px;
-    background:#111;
-    border-top:4px solid #4caf50;
+.diccionario-over {
+    margin-top: 50px;
+    padding: 30px;
+    background: #111;
+    border-top: 4px solid #4caf50;
 }
 
-.diccionario-over h2{
-    color:#8cff66;
-    margin-bottom:15px;
+.diccionario-over h2 {
+    color: #8cff66;
+    margin-bottom: 15px;
 }
 
-.diccionario-over ul{
-    margin-left:20px;
+.diccionario-over ul {
+    margin-left: 20px;
 }
 
 /* ==================================================
-   NETHER
+NETHER
 ================================================== */
 
-.body-n{
-    background:#120707;
-    color:#f5f5f5;
+.body-n {
+    background: #120707;
+    color: #f5f5f5;
 }
 
-.navbar-n{
-    background:linear-gradient(90deg,#3b0000,#6b0f0f);
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    padding:15px 40px;
-    border-bottom:4px solid #ff5e00;
-    height:150px;
+.navbar-n {
+    background: linear-gradient(90deg, #3b0000, #6b0f0f);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+    border-bottom: 4px solid #ff5e00;
 }
 
-.nav-links-n{
-    display:flex;
-    gap:25px;
-    align-items:center;
-    height:150px;
+.nav-links-n {
+    display: flex;
+    gap: 25px;
+    align-items: center;
+    height: 150px;
 }
 
-.nav-links-n a{
-    text-decoration:none;
-    color:white;
-    font-weight:bold;
+.nav-links-n a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
 }
 
-.main-n{
-    width:90%;
-    max-width:1200px;
-    margin:auto;
-    padding:40px 0;
+.main-n {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+    padding: 40px 0;
 }
 
-.presentacion-criaturas-nether{
-    text-align:center;
-    background:linear-gradient(
-        rgba(60,0,0,.9),
-        rgba(20,0,0,.9)
-    );
-    padding:40px;
-    border-radius:15px;
-    border:2px solid #ff4500;
-    margin-bottom:40px;
+.presentacion-criaturas-nether {
+    text-align: center;
+    background: linear-gradient(rgba(60, 0, 0, .9),
+            rgba(20, 0, 0, .9));
+    padding: 40px;
+    border-radius: 15px;
+    border: 2px solid #ff4500;
+    margin-bottom: 40px;
 }
 
-.presentacion-criaturas-nether h1{
-    color:#ff7b00;
-    font-size:3rem;
-    margin-bottom:20px;
-    text-shadow:0 0 15px #ff4500;
+.presentacion-criaturas-nether h1 {
+    color: #ff7b00;
+    font-size: 3rem;
+    margin-bottom: 20px;
+    text-shadow: 0 0 15px #ff4500;
 }
 
-.lista-criaturas-nether{
-    display:flex;
-    flex-direction:column;
-    gap:30px;
-}
-
-.nether-criatura{
+.lista-criaturas-nether {
     display: flex;
     flex-direction: column;
-    background:#2a0d0d;
-    border-left:8px solid #ff4500;
-    border-radius:15px;
-    padding:25px;
-    transition:.3s;
-    box-shadow:0 0 15px rgba(255,69,0,.2);
+    gap: 30px;
 }
-.div-mob-n{
+
+.nether-criatura {
     display: flex;
+    flex-direction: column;
+    background: #2a0d0d;
+    border-left: 8px solid #ff4500;
+    border-radius: 15px;
+    padding: 25px;
+    transition: .3s;
+    box-shadow: 0 0 15px rgba(255, 69, 0, .2);
+}
+
+.div-mob-n {
+    display: flex;
+    flex-wrap: wrap;
     flex-direction: row;
     gap: 60px;
-    height: 600px;
     align-items: center;
 }
-.img-mob-n{
+
+.img-mob-n {
     display: flex;
-    width: 40%;
+    flex: 1;
     height: auto;
     align-items: center;
+
 }
-.img-mob-n img{
-width: 85%;
-}   
-.descripcion-criatura-nether{
+
+.img-mob-n img {
+    width: 85%;
+}
+
+.descripcion-criatura-nether {
     display: flex;
-    width: 50%;
+    flex: 1;
     flex-direction: column;
     gap: 20px;
 }
-.nether-criatura:hover{
-    transform:translateY(-8px) scale(1.02);
-    box-shadow:0 0 25px rgba(255,69,0,.5);
+
+.nether-criatura:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 0 25px rgba(255, 69, 0, .5);
 }
 
-.nether-criatura h2{
-    color:#ff9500;
-    margin-bottom:15px;
+.nether-criatura h2 {
+    color: #ff9500;
+    margin-bottom: 15px;
     font-size: 40px;
 }
 
-.nether-criatura h2:hover{
-    color:#ff9900;
+.nether-criatura h2:hover {
+    color: #ff9900;
     text-shadow:
         0 0 10px #ff4500,
         0 0 20px #ff7700;
 }
 
-.descripcion-criatura-nether ul{
-    list-style:none;
+.descripcion-criatura-nether ul {
+    list-style: none;
 }
 
-.descripcion-criatura-nether li{
-    margin-bottom:15px;
-    background:#381414;
-    padding:15px;
-    border-radius:10px;
+.descripcion-criatura-nether li {
+    margin-bottom: 15px;
+    background: #381414;
+    padding: 15px;
+    border-radius: 10px;
 }
 
-.descripcion-criatura-nether h4{
-    display:inline;
-    color:#ffae42;
-}
-/* ==================================================
-   CUEVAS
-================================================== */
-
-.body-c{
-    background:#111418;
-    color:#e5e5e5;
-    line-height:1.6;
-}
-
-.navbar-c{
-    background:linear-gradient(90deg,#1d1f24,#31343d);
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    padding:15px 40px;
-    border-bottom:4px solid #00c8ff;
-    height:150px;
-}
-
-.nav-links-c{
-    display:flex;
-    gap:25px;
-}
-
-.nav-links-c a{
-    color:white;
-    text-decoration:none;
-    font-weight:bold;
-}
-
-.intro-cuevas{
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
-    gap:40px;
-    padding:50px;
-    background:linear-gradient(
-        rgba(20,20,25,.95),
-        rgba(10,10,15,.95)
-    );
-}
-
-.intro-cuevas-texto{
-    flex:1;
-}
-
-.intro-cuevas-texto h1{
-    color:#00d9ff;
-    font-size:3rem;
-    margin-bottom:20px;
-    text-shadow:0 0 15px #00d9ff;
-}
-
-.intro-cuevas-imagen{
-    flex:1;
-    text-align:center;
-}
-
-.intro-cuevas-imagen img{
-    width:100%;
-    max-width:450px;
-}
-
-.bioma-cuevas{
-    margin:30px;
-    padding:30px;
-    background:#1d2229;
-    border-radius:15px;
-    border-left:8px solid #00d9ff;
-    box-shadow:0 0 15px rgba(0,217,255,.15);
-}
-
-.intro-bioma-cuevas{
-    text-align:center;
-    margin-bottom:25px;
-}
-
-.intro-bioma-cuevas h2{
-    color:#5be8ff;
-    margin-bottom:15px;
-}
-
-.div-mobs-cuevas{
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
-    gap:25px;
-    background:#252b35;
-    margin-bottom:20px;
-    padding:20px;
-    border-radius:12px;
-    transition:.3s;
-}
-
-.div-mobs-cuevas:hover{
-    transform:translateY(-8px) scale(1.02);
-    box-shadow:0 0 20px rgba(0,217,255,.3);
-}
-
-.texto-mobs-cuevas{
-    flex:1;
-}
-
-.texto-mobs-cuevas h2{
-    color:#7aefff;
-    margin-bottom:10px;
-}
-
-.texto-mobs-cuevas h2:hover{
-    color:#7ef5ff;
-    text-shadow:0 0 15px #00d9ff;
-}
-
-.img-mob-cuevas{
-    flex:0 0 220px;
-    text-align:center;
-}
-
-.img-mob-cuevas img{
-    width:200px;
-    max-width:100%;
-}
-
-.Items-cuevas{
-    padding:30px;
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(350px,1fr));
-    gap:20px;
-}
-
-.div-item-cuevas{
-    background:#20252d;
-    border-left:6px solid #5be8ff;
-    border-radius:12px;
-    padding:20px;
-    display:flex;
-    align-items:center;
-    gap:20px;
-    transition:.3s;
-}
-
-.div-item-cuevas:hover{
-    box-shadow:0 0 15px rgba(91,232,255,.4);
-    border-left-width:12px;
-}
-
-.img-item-cuevas img{
-    width:100px;
-}
-
-.img-item-cuevas img:hover{
-    transform:rotate(5deg) scale(1.1);
-    transition:.3s;
-}
-
-.texto-item-cuevas h2{
-    color:#5be8ff;
-}
-
-.estructuras-cuevas{
-    padding:30px;
-}
-
-.div-estructura-cuevas{
-    display:flex;
-    align-items:center;
-    gap:25px;
-    background:#252b35;
-    padding:20px;
-    margin-bottom:20px;
-    border-radius:12px;
-    border-left:6px solid #00d9ff;
-}
-
-.texto-estructura-cuevas{
-    flex:1;
-}
-
-.texto-estructura-cuevas h2{
-    color:#7aefff;
-    margin-bottom:10px;
-}
-
-.img-estructura-cuevas img{
-    width:220px;
+.descripcion-criatura-nether h4 {
+    display: inline;
+    color: #ffae42;
 }
 
 /* ==================================================
-   END
+CUEVAS
 ================================================== */
 
-.body-e{
-    background:#09070d;
-    color:#f2f2f2;
+.body-c {
+    background: #111418;
+    color: #e5e5e5;
+    line-height: 1.6;
 }
 
-.navbar-e{
-    background:linear-gradient(90deg,#180023,#2d1040);
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    padding:15px 40px;
-    border-bottom:4px solid #b266ff;
-    height:150px;
+.navbar-c {
+    background: linear-gradient(90deg, #1d1f24, #31343d);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+    border-bottom: 4px solid #00c8ff;
 }
 
-.nav-links-e{
-    display:flex;
-    gap:25px;
+.nav-links-c {
+    display: flex;
+    gap: 25px;
 }
 
-.nav-links-e a{
-    text-decoration:none;
-    color:white;
-    font-weight:bold;
+.nav-links-c a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
 }
 
-.intro-end{
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    gap:40px;
-    padding:50px;
-    background:linear-gradient(
-        rgba(20,0,30,.9),
-        rgba(10,0,15,.9)
-    );
+.intro-cuevas {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    padding: 50px;
+    background: linear-gradient(rgba(20, 20, 25, .95),
+            rgba(10, 10, 15, .95));
 }
 
-.intro-end-texto{
-    flex:1;
+.intro-cuevas-texto {
+    flex: 1;
 }
 
-.intro-end-texto h1{
-    font-size:3rem;
-    color:#d6a8ff;
-    margin-bottom:20px;
-    text-shadow:0 0 15px #b266ff;
+.intro-cuevas-texto h1 {
+    color: #00d9ff;
+    font-size: 3rem;
+    margin-bottom: 20px;
+    text-shadow: 0 0 15px #00d9ff;
 }
 
-.intro-end-imagen{
-    flex:1;
-    text-align:center;
+.intro-cuevas-imagen {
+    flex: 1;
+    text-align: center;
 }
 
-.intro-end-imagen img{
-    width:100%;
-    max-width:450px;
-    border-radius:15px;
+.intro-cuevas-imagen img {
+    width: 100%;
+    max-width: 450px;
+}
+
+.bioma-cuevas {
+    margin: 30px;
+    padding: 30px;
+    background: #1d2229;
+    border-radius: 15px;
+    border-left: 8px solid #00d9ff;
+    box-shadow: 0 0 15px rgba(0, 217, 255, .15);
+}
+
+.intro-bioma-cuevas {
+    text-align: center;
+    margin-bottom: 25px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap:30px;
+}
+
+.intro-bioma-cuevas h2 {
+    color: #5be8ff;
+}
+.comun{
+    display: flex;
+    flex-direction: column;
+    padding: 40px;
+}
+.mobs-comun{
+    display: flex;
+    flex-direction:column;
+    width: 80%;
+}
+.div-mobs-cuevas {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 25px;
+    background: #252b35;
+    margin-bottom: 20px;
+    padding: 20px;
+    border-radius: 12px;
+    transition: .3s;
+}
+
+.div-mobs-cuevas:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 0 20px rgba(0, 217, 255, .3);
+}
+
+.texto-mobs-cuevas {
+    flex: 1;
+}
+
+.texto-mobs-cuevas h2 {
+    color: #7aefff;
+    margin-bottom: 10px;
+}
+
+.texto-mobs-cuevas h2:hover {
+    color: #7ef5ff;
+    text-shadow: 0 0 15px #00d9ff;
+}
+
+.img-mob-cuevas {
+    flex: 1;
+    text-align: center;
+}
+
+.img-mob-cuevas img {
+    width: 200px;
+    max-width: 100%;
+}
+
+.Items-cuevas {
+    padding: 30px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 20px;
+}
+
+.div-item-cuevas {
+    background: #20252d;
+    border-left: 6px solid #5be8ff;
+    border-radius: 12px;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    transition: .3s;
+}
+
+.div-item-cuevas:hover {
+    box-shadow: 0 0 15px rgba(91, 232, 255, .4);
+    border-left-width: 12px;
+}
+
+.img-item-cuevas img {
+    width: 100px;
+}
+
+.img-item-cuevas img:hover {
+    transform: rotate(5deg) scale(1.1);
+    transition: .3s;
+}
+
+.texto-item-cuevas h2 {
+    color: #5be8ff;
+}
+
+.estructuras-cuevas {
+    padding: 30px;
+}
+
+.div-estructura-cuevas {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    background: #252b35;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 12px;
+    border-left: 6px solid #00d9ff;
+}
+
+.texto-estructura-cuevas {
+    flex: 1;
+}
+
+.texto-estructura-cuevas h2 {
+    color: #7aefff;
+    margin-bottom: 10px;
+}
+
+.img-estructura-cuevas img {
+    width: 220px;
+}
+
+/* ==================================================
+END
+================================================== */
+
+.body-e {
+    background: #09070d;
+    color: #f2f2f2;
+}
+
+.navbar-e {
+    background: linear-gradient(90deg, #180023, #2d1040);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+    border-bottom: 4px solid #b266ff;
+}
+
+.nav-links-e {
+    display: flex;
+    gap: 25px;
+}
+
+.nav-links-e a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+.intro-end {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+    padding: 50px;
+    background: linear-gradient(rgba(20, 0, 30, .9),
+            rgba(10, 0, 15, .9));
+}
+
+.intro-end-texto {
+    flex: 1;
+}
+
+.intro-end-texto h1 {
+    font-size: 3rem;
+    color: #d6a8ff;
+    margin-bottom: 20px;
+    text-shadow: 0 0 15px #b266ff;
+}
+
+.intro-end-imagen {
+    flex: 1;
+    text-align: center;
+}
+
+.intro-end-imagen img {
+    width: 100%;
+    max-width: 450px;
+    border-radius: 15px;
 }
 
 .criaturas-end,
 .bloques-end,
-.estructuras-end{
-    padding:40px;
+.estructuras-end {
+    padding: 40px;
 }
 
 .end-criatura,
-.estructura-end{
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
-    gap:25px;
-    background:#1b1025;
-    margin-bottom:25px;
-    padding:25px;
-    border-left:8px solid #b266ff;
-    border-radius:12px;
-    transition:.3s;
+.estructura-end {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 25px;
+    background: #1b1025;
+    margin-bottom: 25px;
+    padding: 25px;
+    border-left: 8px solid #b266ff;
+    border-radius: 12px;
+    transition: .3s;
 }
 
-.end-criatura-f{
-    display:flex;
-    flex-direction:column;
-    align-items:center;
-    gap:25px;
-    background:#1b1025;
-    margin-bottom:25px;
-    padding:25px;
-    border-left:8px solid #b266ff;
-    border-radius:12px;
+.end-criatura-f {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+    background: #1b1025;
+    margin-bottom: 25px;
+    padding: 25px;
+    border-left: 8px solid #b266ff;
+    border-radius: 12px;
 }
 
 .end-criatura:hover,
-.end-criatura-f:hover{
-    transform:translateY(-8px) scale(1.02);
-    box-shadow:0 0 20px rgba(178,102,255,.4);
+.end-criatura-f:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 0 20px rgba(178, 102, 255, .4);
 }
 
 .texto-criatura-end h2,
 .texto-item-end h2,
-.texto-estructura-end h2{
-    color:#d6a8ff;
-    margin-bottom:10px;
+.texto-estructura-end h2 {
+    color: #d6a8ff;
+    margin-bottom: 10px;
 }
 
 .texto-criatura-end h2:hover,
 .texto-item-end h2:hover,
-.texto-estructura-end h2:hover{
-    text-shadow:0 0 15px #b266ff;
+.texto-estructura-end h2:hover {
+    text-shadow: 0 0 15px #b266ff;
 }
 
-.img-criatura-end img{
-    width:200px;
+.img-criatura-end img {
+    width: 200px;
 }
 
-.img-item-end img{
-    width:120px;
+.img-item-end img {
+    width: 120px;
 }
 
-.img-estructura-end img{
-    width:400px;
+.img-estructura-end img {
+    width: 400px;
 }
 
 .img-criatura-end img:hover,
 .img-estructura-end img:hover,
-.img-item-end img:hover{
-    transform:scale(1.1);
-    transition:.3s;
+.img-item-end img:hover {
+    transform: scale(1.1);
+    transition: .3s;
 }
 
-.item-end{
-    display:flex;
-    align-items:center;
-    gap:25px;
-    background:#21122d;
-    margin-bottom:20px;
-    padding:20px;
-    border-radius:12px;
-    border-left:6px solid #c68cff;
-    transition:.3s;
+.item-end {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    background: #21122d;
+    margin-bottom: 20px;
+    padding: 20px;
+    border-radius: 12px;
+    border-left: 6px solid #c68cff;
+    transition: .3s;
 }
 
-.item-end:hover{
-    box-shadow:0 0 15px rgba(198,140,255,.5);
-    border-left-width:12px;
+.item-end:hover {
+    box-shadow: 0 0 15px rgba(198, 140, 255, .5);
+    border-left-width: 12px;
 }
 
-.estruc-e{
-    border-radius:20px;
-    border:2px solid #b700ff;
+.estruc-e {
+    border-radius: 20px;
+    border: 2px solid #b700ff;
 }
 
 /* ==================================================
-   HOVERS GLOBALES
+HOVERS GLOBALES
 ================================================== */
 
 h1:hover,
-h2:hover{
-    letter-spacing:2px;
-    transition:.3s;
+h2:hover {
+    letter-spacing: 2px;
+    transition: .3s;
 }
 
 /* ==================================================
-   SCROLLBAR
+SCROLLBAR
 ================================================== */
 
-::-webkit-scrollbar{
-    width:12px;
+::-webkit-scrollbar {
+    width: 12px;
 }
 
-::-webkit-scrollbar-track{
-    background:#111;
+::-webkit-scrollbar-track {
+    background: #111;
 }
 
-::-webkit-scrollbar-thumb{
-    border-radius:10px;
-    background:#00d9ff;
+::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background: #00d9ff;
 }
 
-::-webkit-scrollbar-thumb:hover{
-    background:#d6a8ff;
+::-webkit-scrollbar-thumb:hover {
+    background: #d6a8ff;
 }
 
 /* ==================================================
-   RESPONSIVE
+RESPONSIVE
 ================================================== */
 
-@media(max-width:768px){
+@media(max-width:768px) {
 
     .navbar,
     .navbar-c,
     .navbar-e,
-    .navbar-n{
-        flex-direction:column;
-        gap:15px;
+    .navbar-n {
+        flex-direction: column;
+        gap: 15px;
     }
 
     .nav-links,
     .nav-links-c,
     .nav-links-e,
-    .nav-links-n{
-        flex-wrap:wrap;
-        justify-content:center;
+    .nav-links-n {
+        flex-wrap: wrap;
+        justify-content: center;
     }
 
     .intro-cuevas,
-    .intro-end{
-        flex-direction:column;
-        text-align:center;
+    .intro-end {
+        flex-direction: column;
+        text-align: center;
     }
 
     .mob-over,
@@ -819,137 +823,178 @@ h2:hover{
     .end-criatura,
     .item-end,
     .estructura-end,
-    .Material{
-        flex-direction:column;
-        text-align:center;
+    .Material {
+        flex-direction: column;
+        text-align: center;
     }
 
     .intro-cuevas-texto h1,
     .intro-end-texto h1,
-    .presentacion-criaturas-nether h1{
-        font-size:2rem;
+    .presentacion-criaturas-nether h1 {
+        font-size: 2rem;
     }
 }
 
 /* ==================================================
-   TRANSICIONES ENTRE MUNDOS
+TRANSICIONES ENTRE MUNDOS
 ================================================== */
 
-#transicion{
-    position:fixed;
-    inset:0;
-    z-index:9999;
-    pointer-events:none;
+#transicion {
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    pointer-events: none;
 }
 
 /* OVERWORLD */
 
-#transicion.overworld{
-    background-image:url('/static/images/grass_block.png');
-    background-repeat:repeat;
-    background-size:200px;
-    animation:abrirOverworld 1s forwards;
+#transicion.overworld {
+    background-image: url('/static/images/grass_block.png');
+    background-repeat: repeat;
+    background-size: 200px;
+    animation: abrirOverworld 1s forwards;
 }
 
 /* CUEVAS */
 
-#transicion.caves{
+#transicion.caves {
     background:
-    repeating-linear-gradient(
-        45deg,
-        #555 0px,
-        #555 40px,
-        #333 40px,
-        #333 80px
-    );
+        repeating-linear-gradient(45deg,
+            #555 0px,
+            #555 40px,
+            #333 40px,
+            #333 80px);
 
-    animation:romperPiedra 1s forwards;
+    animation: romperPiedra 1s forwards;
 }
 
 /* NETHER */
 
-#transicion.nether{
-    background-image:url('/static/images/portal.gif');
-    background-size:cover;
-    animation:abrirNether 1s forwards;
+#transicion.nether {
+    background-image: url('/static/images/portal.gif');
+    background-size: cover;
+    animation: abrirNether 1s forwards;
 }
 
 /* END */
 
-#transicion.end{
-    background-image:url('/static/images/portal_end.gif');
-    background-size:cover;
-    animation:abrirEnd 1s forwards;
+#transicion.end {
+    background-image: url('/static/images/portal_end.gif');
+    background-size: cover;
+    animation: abrirEnd 1s forwards;
 }
 
 /* ==================================================
-   KEYFRAMES
+KEYFRAMES
 ================================================== */
 
-@keyframes abrirOverworld{
-    from{
-        transform:translateY(100%);
+@keyframes abrirOverworld {
+    from {
+        transform: translateY(100%);
     }
-    to{
-        transform:translateY(0%);
+
+    to {
+        transform: translateY(0%);
     }
 }
 
-@keyframes romperPiedra{
-    0%{
-        clip-path:circle(100%);
+@keyframes romperPiedra {
+    0% {
+        clip-path: circle(100%);
     }
 
-    100%{
-        clip-path:circle(0%);
-    }
-}
-
-@keyframes abrirNether{
-    0%{
-        opacity:0;
-        transform:scale(0);
-    }
-
-    100%{
-        opacity:1;
-        transform:scale(8);
+    100% {
+        clip-path: circle(0%);
     }
 }
 
-@keyframes abrirEnd{
-    0%{
-        opacity:0;
-        transform:scale(.1);
+@keyframes abrirNether {
+    0% {
+        opacity: 0;
+        transform: scale(0);
     }
 
-    100%{
-        opacity:1;
-        transform:scale(8);
+    100% {
+        opacity: 1;
+        transform: scale(8);
+    }
+}
+
+@keyframes abrirEnd {
+    0% {
+        opacity: 0;
+        transform: scale(.1);
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(8);
     }
 }
 
 #transicion.overworld,
 #transicion.caves,
 #transicion.nether,
-#transicion.end{
-    opacity:1 !important;
+#transicion.end {
+    opacity: 1 !important;
 }
-.momo{
+
+.momo {
     width: 100%;
 }
-.variantes ul{
+
+.variantes ul {
     display: flex;
     flex-direction: column;
     gap: 20px;
 }
-.variantes li{
+
+.variantes li {
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
-.variante{
+
+.variante {
     width: 30%;
     border-radius: 20px;
     border: #4CAF50 2px solid;
+}
+.body-o img {
+    transition: all 0.3s ease;
+}
+
+.body-o img:hover {
+    transform: scale(1.1) rotate(2deg);
+    filter: drop-shadow(0 0 15px #6dff4f);
+}
+
+.body-c img:hover{
+    transform: scale(1.08) rotate(-2deg);
+    filter: drop-shadow(0 0 15px #00d9ff);
+    transition: .3s;
+}
+.img-mob-n img:hover {
+    transform: scale(1.1);
+    filter:
+        drop-shadow(0 0 10px #ff4500)
+        drop-shadow(0 0 20px #ff7700);
+    transition: .3s;
+}
+
+.body-e img:hover{
+    transform: scale(1.08) rotate(2deg);
+    filter:
+        drop-shadow(0 0 10px #b266ff)
+        drop-shadow(0 0 20px #d6a8ff);
+    transition: .3s;
+}
+
+.boss{
+    width: 100%;
+    display:flex;
+    justify-content: center;
+}
+.boss img{
+    width: 80%;
 }
