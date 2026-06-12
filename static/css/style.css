@@ -180,6 +180,24 @@ OVERWORLD
     border: 3px solid #2d5a27;
     margin-bottom: 20px;
 }
+.img-bioma-b {
+    height: 400px;
+    background: url('/static/images/bosque.jfif');
+    background-size: cover;
+    border-radius: 20px;
+    border: 3px solid #2d5a27;
+    margin-bottom: 20px;
+}
+
+.img-bioma-d {
+    height: 400px;
+    background: url('/static/images/desierto.jfif');
+    background-size: cover;
+    border-radius: 20px;
+    border: 3px solid #2d5a27;
+    margin-bottom: 20px;
+}
+
 
 .img-bioma-cuevas{
     display:flex;
@@ -942,6 +960,11 @@ KEYFRAMES
 .momo {
     width: 100%;
 }
+.momo:hover {
+    transform:none;
+    filter:none;
+    transition: none;
+}
 
 .variantes ul {
     display: flex;
@@ -982,7 +1005,7 @@ KEYFRAMES
     transition: .3s;
 }
 
-.body-e img:hover{
+.main-e img:hover{
     transform: scale(1.08) rotate(2deg);
     filter:
         drop-shadow(0 0 10px #b266ff)
