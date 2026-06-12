@@ -3,7 +3,6 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    border: red 1px solid;
     font-family: 'MinecraftFont', Arial, Helvetica, sans-serif;
 }
 
@@ -948,6 +947,12 @@ KEYFRAMES
         opacity: 1;
         transform: scale(8);
     }
+}
+
+footer{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
 }
 
 #transicion.overworld,
