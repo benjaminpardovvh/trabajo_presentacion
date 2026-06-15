@@ -313,7 +313,6 @@ NETHER
     display: flex;
     gap: 25px;
     align-items: center;
-    height: 150px;
 }
 
 .nav-links-n a {
