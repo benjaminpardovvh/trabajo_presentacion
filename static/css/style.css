@@ -8,7 +8,7 @@
 
 @font-face {
     font-family: 'MinecraftFont';
-    src: url('/static/fuente/Minecraft.ttf') format('truetype');
+    src: url('static/fuente/Minecraft.ttf') format('truetype');
 }
 
 body {
@@ -52,19 +52,19 @@ LINKS DE MUNDOS
 }
 
 .O {
-    background-image: url('/static/images/tierra.webp');
+    background-image: url('static/images/tierra.webp');
 }
 
 .C {
-    background-image: url('/static/images/piedra.webp');
+    background-image: url('static/images/piedra.webp');
 }
 
 .N {
-    background-image: url('/static/images/netherrack.jpg');
+    background-image: url('static/images/netherrack.jpg');
 }
 
 .E {
-    background-image: url('/static/images/end stone.jpg');
+    background-image: url('static/images/end stone.jpg');
 }
 
 /* ==================================================
@@ -173,7 +173,7 @@ OVERWORLD
 
 .img-bioma {
     height: 400px;
-    background: url('/static/images/Plains.jpeg');
+    background: url('static/images/Plains.jpeg');
     background-size: cover;
     border-radius: 20px;
     border: 3px solid #2d5a27;
@@ -181,7 +181,7 @@ OVERWORLD
 }
 .img-bioma-b {
     height: 400px;
-    background: url('/static/images/bosque.jfif');
+    background: url('static/images/bosque.jfif');
     background-size: cover;
     border-radius: 20px;
     border: 3px solid #2d5a27;
@@ -190,7 +190,7 @@ OVERWORLD
 
 .img-bioma-d {
     height: 400px;
-    background: url('/static/images/desierto.jfif');
+    background: url('static/images/desierto.jfif');
     background-size: cover;
     border-radius: 20px;
     border: 3px solid #2d5a27;
@@ -865,7 +865,7 @@ TRANSICIONES ENTRE MUNDOS
 /* OVERWORLD */
 
 #transicion.overworld {
-    background-image: url('/static/images/grass_block.png');
+    background-image: url('static/images/grass_block.png');
     background-repeat: repeat;
     background-size: 200px;
     animation: abrirOverworld 1s forwards;
@@ -887,7 +887,7 @@ TRANSICIONES ENTRE MUNDOS
 /* NETHER */
 
 #transicion.nether {
-    background-image: url('/static/images/portal.gif');
+    background-image: url('static/images/portal.gif');
     background-size: cover;
     animation: abrirNether 1s forwards;
 }
@@ -895,7 +895,7 @@ TRANSICIONES ENTRE MUNDOS
 /* END */
 
 #transicion.end {
-    background-image: url('/static/images/portal_end.gif');
+    background-image: url('static/images/portal_end.gif');
     background-size: cover;
     animation: abrirEnd 1s forwards;
 }
