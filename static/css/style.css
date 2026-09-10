@@ -865,7 +865,7 @@ TRANSICIONES ENTRE MUNDOS
 /* OVERWORLD */
 
 #transicion.overworld {
-    background-image: url('static/images/grass_block.png');
+    background-image: url('../images/grass_block.png');
     background-repeat: repeat;
     background-size: 200px;
     animation: abrirOverworld 1s forwards;
@@ -887,7 +887,7 @@ TRANSICIONES ENTRE MUNDOS
 /* NETHER */
 
 #transicion.nether {
-    background-image: url('static/images/portal.gif');
+    background-image: url('../images/portal.gif');
     background-size: cover;
     animation: abrirNether 1s forwards;
 }
@@ -895,7 +895,7 @@ TRANSICIONES ENTRE MUNDOS
 /* END */
 
 #transicion.end {
-    background-image: url('static/images/portal_end.gif');
+    background-image: url('../images/portal_end.gif');
     background-size: cover;
     animation: abrirEnd 1s forwards;
 }
